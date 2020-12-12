@@ -1,0 +1,82 @@
+@charset "UTF-8";
+body {
+    background-image: url(../photos/backgroundPlain.JPG);
+}
+body div div {
+    position: relative;
+    /* [disabled]right: -94px; */
+}
+.videos {
+    /* [disabled]width: 200px; */
+}
+.videosAndParagraph {
+    display: flex;
+}
+.videosAndParagraph .video1 #vid1 {
+	width: 490px;
+}
+.videosAndParagraph .video2 #vid2 {
+    width: 490px;
+    bottom: -280px;
+}
+.videosAndParagraph #caption {
+    position: absolute;
+    top: -17px;
+    max-width: 640px;
+    font-family: reenie-beanie;
+    font-style: normal;
+    font-weight: 500;
+    color: rgba(243,236,236,1.00);
+    font-size: xx-large;
+    font-variant: normal;
+    /* [disabled]border-style: double; */
+    left: 612px;
+    min-width: 600px;
+    text-shadow: 1px 1px #000000;
+}
+.videosAndParagraph .justVideos {
+    margin-left: 47px;
+}
+.videos #vid2 {
+	width: 496px;
+}
+.button1 {
+    /* [disabled]width: 400px; */
+    position: relative;
+    display: flex;
+    left: 31px;
+    top: 6px;
+}
+.button1 #changeBtn1 {
+    width: 180px;
+    /* [disabled]position: absolute; */
+    /* [disabled]left: -14px; */
+    color: rgba(227,197,0,1.00);
+    font-family: reenie-beanie;
+    font-style: normal;
+    font-weight: 500;
+    font-size: larger;
+    background-color: rgba(252,252,252,1.00);
+}
+.button1 #changeBtn2 {
+    width: 180px;
+    /* [disabled]position: absolute; */
+    /* [disabled]right: 47px; */
+    font-family: reenie-beanie;
+    font-style: normal;
+    font-weight: 500;
+    font-size: larger;
+    color: rgba(0,113,234,1.00);
+    background-color: rgba(255,255,255,1.00);
+}
+.button1 #changeBtn3 {
+    width: 180px;
+    /* [disabled]position: absolute; */
+    /* [disabled]right: -140px; */
+    background-color: rgba(255,255,255,1.00);
+    color: rgba(24,111,3,1.00);
+    font-family: reenie-beanie;
+    font-style: normal;
+    font-weight: 500;
+    font-size: larger;
+}
