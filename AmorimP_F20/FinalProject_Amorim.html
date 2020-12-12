@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<link href="css/final_AmorimAdjusted1.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/reenie-beanie:n5:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="videosAndParagraph">
+<div class = "justVideos">
+<div class="video1">
+  <video id="vid1" preload="auto" muted autoplay loop >
+    <source src="video/bittersweet1.mp4" type="video/mp4">
+  </video>
+	</div>
+<div class="video2">
+  <video id="vid2" muted autoplay loop >
+    <source src="video/bitterSweet2.mp4" type="video/mp4">
+  </video>
+</div>
+</div>
+<p id="caption" >Memories are just moments that fade with time.</p>
+
+</div>    
+
+<div class="button1">
+<button id="changeBtn1" onClick="changeVideo1()">Happy Memories</button>
+<button id="changeBtn2" onClick="changeVideo2()">Sad Memories</button>
+<button id="changeBtn3" onClick="changeVideo3()">Bittersweet Memories</button>
+	</div>
+
+<script>
+	
+var vid1=document.getElementById("vid1");
+var vid2=document.getElementById("vid2");
+var happyMoments1 = "video/happyMoments1.mp4";
+var happyMoments2 = "video/happyMoments2.mp4";
+var sadMoments1 = "video/sadMoments1.mp4";
+var sadMoments2 = "video/sadMoments2.mp4";
+var bittersweet1 = "video/bittersweet1.mp4";
+var bittersweet2 = "video/bitterSweet2.mp4";
+var caption = document.getElementById("caption");
+	
+function changeVideo1(){
+	vid1.src= happyMoments1;
+	vid2.src= happyMoments2;
+	caption.innerHTML= "My happy pictures are the ones which embody the significance of the word ‘happiness’ to me. As a kid with my cousin, the first night I slept in my new home at that time, when my friend was accepted into a Law University in Brazil. These moments are marked in my mind because of the people that were around me at that time. Since  watching the film Into the Wild, I bring with me the main character’s words “happiness is only real when shared.” I think that’s why my happiest moments are when I have my friends and family around. You can see the difference of the smiles in the pictures that are from my happy moments compared to those in my sad moments. Sharing a memory with someone, creating a joyful connection with another person,, is one of our most beautiful acts as human beings.. Individualistic memories fade, the ones that stay are those we share.";
+}	
+
+function changeVideo2(){
+	vid1.src= sadMoments1;
+	vid2.src= sadMoments2;
+	caption.innerHTML = "The sad moments are the ones where even though I was smiling in the picture, something deeper inside me was sad. There’s a picture of my birthday of 2013 in which I was smiling, but really I was carrying alot of pain . This brings me the thought that there’s no picture of me where I seem  down, or like I am going through some struggle. We only take pictures to remind us of the good moments, even though they can’t all be good. With the passage of time we can lie to ourselves, and revisiting those pictures we can all exclaim “Oh, what a happy moment that was!”, and just live with that inside us. I don’t want only happy memories, and the smile of those pictures are showing something that was not me, it was forced upon me by the pressure of society.";
+}
+	
+function changeVideo3(){
+	vid1.src= bittersweet1;
+	vid2.src= bittersweet2;
+	caption.innerHTML = "There's a word in Brazil, Saudade, that means I miss you. Bittersweet moments  can be encapsulated in this word. In Brazil,unlike the United States, parents allow their kids to live home and support them until they have a steady job and somewhere to go. This forms a pretty strong bond not only between parents and kids, but also kids with their friends, since we normally have the same friends from middle school to the end of our lives.<br> When I first moved to Milwaukee, for the first time I felt  alone, and the word Saudade made more sense than ever. These pictures are from people that are not with me anymore, such as my grandfather, my great grandmother, and my dog. They are about moments when I look and miss them. My father and I sharing a milkshake, him giving me a medal in a judo competition, my little brother when he was younger, me and my cousin at his house playing cops. These moments hurt even more than sad moments. Bittersweet moments are the ones that were so good in the past, but when I look at these pictures, the memories leave a hole in me called Saudade.";
+}	
+	
+	
+	
+	
+	
+	</script>
+	
+</body>
+
+</html>
