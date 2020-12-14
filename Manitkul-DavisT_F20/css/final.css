@@ -1,0 +1,212 @@
+.top.row #arbery {
+    width: 260px;
+    height: 350px;
+    text-align: left;
+    border: thick dashed #D6C839;
+    margin-left: 32px;
+}
+.top.row #rice {
+    width: 260px;
+    height: 350px;
+    text-align: center;
+    border: thick dashed #D6C839;
+    margin-left: 80px;
+}
+.top.row #taylor {
+    width: 260px;
+    height: 350px;
+    border: thick dashed #D6C839;
+    margin-left: 83px;
+}
+.bottom #martin {
+    width: 260px;
+    height: 350px;
+    border: thick dashed #D6C839;
+    margin-left: 30px;
+}
+
+.mid div button {
+    border-radius: 24px;
+    opacity: 1;
+}
+.bottom #castille {
+    width: 260px;
+    height: 350px;
+    border: thick dashed #D6C839;
+    margin-left: 80px;
+}
+.bottom {
+    /* [disabled]max-width: 1018px; */
+    /* [disabled]border: thick double #905758; */
+    /* [disabled]max-height: 522px; */
+}
+.bottom #floyd {
+    width: 260px;
+    height: 350px;
+    border: thick dashed #D6C839;
+    margin-left: 83px;
+}
+#our {
+    text-align: center;
+}
+button {
+    font-size: 167px;
+    width: 414px;
+    margin-left: 369px;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    max-height: 103px;
+    height: 200px;
+}
+.mid button {
+    font-size: 106px;
+    max-width: 313px;
+    margin-top: 17px;
+    min-height: 158px;
+    margin-left: 355px;
+}
+#Know {
+    text-align: center;
+    max-width: 1045px;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 138px;
+    line-height: 0;
+    margin-top: 62px;
+    margin-bottom: 74px;
+    color: #905758;
+    margin-left: 19px;
+}
+#our {
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 138px;
+    max-width: 1045px;
+    margin-top: -38px;
+    margin-bottom: -5px;
+    margin-left: 1px;
+    color: #905758;
+}
+.bottom #martinCaption {
+    max-width: 265px;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33px;
+    text-align: center;
+    border: thin solid #905758;
+    margin-top: 9px;
+    margin-bottom: 42px;
+    margin-left: 32px;
+}
+.bottom #castilleCaption {
+    max-width: 295px;
+    text-align: center;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33px;
+    margin-top: -82px;
+    margin-left: 375px;
+    border: thin solid #905758;
+}
+.bottom #floydCaption {
+    max-width: 265px;
+    margin-left: 743px;
+    margin-top: -72px;
+    border: thin solid #905758;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33px;
+    text-align: center;
+}
+img {
+    filter: grayscale(100%);
+    width: 883px;
+    height: 400px;
+}
+.mid #vid1 {
+    width: 721px;
+    border: 19px double #000000;
+    margin-left: 150px;
+    height: 400px;
+}
+.top.row #arberyCaption {
+    max-width: 265px;
+    text-align: center;
+    margin-right: 95px;
+    margin-left: 35px;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33px;
+    margin-top: 5px;
+    border: thin double #905758;
+}
+.top.row #riceCaption {
+    max-width: 265px;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33px;
+    text-align: center;
+    border: thin solid #905758;
+    margin-top: -73px;
+    margin-left: 389px;
+}
+.top.row #taylorCaption {
+    max-width: 265px;
+    text-align: center;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 33px;
+    border: thin solid #905758;
+    margin-top: -71px;
+    margin-left: 744px;
+}
+body {
+    background-color: #BD9956;
+}
+#entireProject button {
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    max-width: 263px;
+    margin-left: 393px;
+    margin-top: 13px;
+    margin-bottom: 28px;
+    font-size: 89px;
+    line-height: normal;
+    text-align: center;
+    text-shadow: 9px 2px #E4D755;
+    background-color: #905758;
+    border-radius: 25px;
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(198,157,158,1.00) 42.04%,rgba(144,87,88,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(198,157,158,1.00) 42.04%,rgba(144,87,88,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(198,157,158,1.00) 42.04%,rgba(144,87,88,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(198,157,158,1.00) 42.04%,rgba(144,87,88,1.00) 100%);
+    -webkit-box-shadow: 4px -2px 29px;
+    box-shadow: 4px -2px 29px;
+    color: #000000;
+}
+#startButton {
+    height: 505px;
+    min-height: 299px;
+    min-width: 166px;
+    max-width: 621px;
+    font-family: bebas-neue;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+}
+body h1 {
+    margin-left: 245px;
+}
+#entireProject #storiesBTN {
+    width: 250px;
+}
