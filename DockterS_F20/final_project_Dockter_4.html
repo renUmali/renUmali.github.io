@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>template_croppingClipPath</title>
+<link href="css/final_project_Dockter_Cropped.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="windowFrame">
+  <video width="1024" height="576" id="v1" muted="muted" loop="loop" onClick="upLeftRandom()" >
+    <source src="videos/11am.mp4" type="video/mp4">
+  </video>
+  <video width="1024" height="576" id="v2" muted="muted" loop="loop" onClick="upRightRandom()" >
+    <source src="videos/2pm.mp4" type="video/mp4">
+  </video>
+  <video width="1024" height="576" id="v3" muted="muted" loop="loop" onClick="downLeftRandom()">
+    <source src="videos/4pm.mp4" type="video/mp4">
+  </video>
+  <video width="1024" height="576" id="v4" muted="muted" loop="loop" onClick="downRightRandom()">
+    <source src="videos/2am.mp4" type="video/mp4">
+  </video>
+<script>
+	
+var morning = "videos/11am.mp4";
+var midday = "videos/2pm.mp4";
+var evening = "videos/4pm.mp4";
+var night = "videos/2am.mp4";
+	
+var upLeft=document.getElementById("v1");
+var upRight=document.getElementById("v2");
+var downLeft=document.getElementById("v3");
+var downRight=document.getElementById("v4");
+	
+function upLeftRandom(){
+	console.log("upper left current time:" + upLeft.currentTime);
+	
+	var randomVideo=Math.floor (Math.random()*4)+1;
+	
+	if (randomVideo == 1){
+		upLeft.src = morning;
+	}
+	
+	if (randomVideo == 2){
+		upLeft.src = midday;
+	}
+	
+	if (randomVideo == 3){
+		upLeft.src = evening;
+	}
+	
+	if (randomVideo == 4){
+		upLeft.src = night;
+	}
+	
+	
+	var randomTime=Math.floor(Math.random() * upLeft.duration);
+	//upLeft.currentTime = randomTime;
+	upLeft.play();
+}
+	
+function upRightRandom(){
+	console.log("upper right current time:" + upRight.currentTime);
+	
+	var randomVideo=Math.floor (Math.random()*4)+1;
+	
+	if (randomVideo == 1){
+		upRight.src = morning;
+	}
+	
+	if (randomVideo == 2){
+		upRight.src = midday;
+	}
+	
+	if (randomVideo == 3){
+		upRight.src = evening;
+	}
+	
+	if (randomVideo == 4){
+		upRight.src = night;
+	}
+	
+	
+	var randomTime=Math.floor(Math.random() * upRight.duration);
+	//upRight.currentTime = randomTime;
+	upRight.play();
+}
+	
+function downLeftRandom(){
+	console.log("lower left current time:" + downLeft.currentTime);
+	
+	var randomVideo=Math.floor (Math.random()*4)+1;
+	
+	if (randomVideo == 1){
+		downLeft.src = morning;
+	}
+	
+	if (randomVideo == 2){
+		downLeft.src = midday;
+	}
+	
+	if (randomVideo == 3){
+		downLeft.src = evening;
+	}
+	
+	if (randomVideo == 4){
+		downLeft.src = night;
+	}
+	
+	
+	
+	var randomTime=Math.floor(Math.random() * downLeft.duration);
+	//downLeft.currentTime = randomTime;
+	downLeft.play();
+}
+	
+function downRightRandom(){
+	console.log("lower right current time:" + downRight.currentTime);
+	
+	var randomVideo=Math.floor (Math.random()*4)+1;
+	
+	if (randomVideo == 1){
+		downRight.src = morning;
+	}
+	
+	if (randomVideo == 2){
+		downRight.src = midday;
+	}
+	
+	if (randomVideo == 3){
+		downRight.src = evening;
+	}
+	
+	if (randomVideo == 4){
+		downRight.src = night;
+	}
+	var randomTime=Math.floor(Math.random() * downRight.duration);
+	//downRight.currentTime = randomTime;
+	downRight.play();
+}	
+	</script>
+</div>
+</body>
+</html>
