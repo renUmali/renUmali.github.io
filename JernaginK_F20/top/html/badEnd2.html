@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bad Ending</title>
+<link href="../css/video2-control_jones.css" rel="stylesheet" type="text/css">	
+</head>
+
+<body>
+<h1>Bad Ending</h1>
+<div class"vidCenter">    
+<video width="70%" id="scene" preload="auto" controls>
+  <source src="../../Videos/badEnd2.mp4" type="video/mp4">
+</video>
+</div>    
+<p id="caption">
+<strong>KIARRA AND GARVIEON ENDED UP BREAKING UP!</strong> Play again for a better outcome!
+</p>
+<div>
+<p>
+<button id="choiceOneGood" onClick="buttonOne()">Try Again</button>    
+</p>    
+<p>
+<button id="choiceTwoBad" onClick="buttonTwo()">Quit</button>    
+</p>
+   
+</div>
+
+    <script>
+    document.getElementById('scene').addEventListener('ended',myHandler,false);
+        
+    var btn1 = document.getElementById("choiceOneGood");
+    var btn2 = document.getElementById("choiceTwoBad"); 
+   
+    var caption = document.getElementById("caption");
+        
+    caption.style.display = 'none';    
+    btn1.style.display = 'none';
+    btn2.style.display = 'none';
+        
+    
+        
+    function myHandler(e) {
+        caption.style.display = 'block';    
+        btn1.style.display = 'block';
+        btn2.style.display = 'block';
+
+    }
+        
+   function buttonOne() {
+        window.open ('scene1_1.html','_self',false)
+    }
+        
+    function buttonTwo() {
+        window.open('https://www.google.com/','_self',false).close();
+    }    
+    </script>
+    
+</body>
+</html>
