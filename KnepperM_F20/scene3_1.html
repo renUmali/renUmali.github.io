@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>driving</title>
+<link href="css/Final_Knepper.css" rel="stylesheet" type="text/css">
+</head>
+
+<body bgcolor="#696969">
+<div>
+  <video id="choiceOneNeutral" onClick="buttonOne()" onMouseOver="choiceOneText()" preload="auto" muted="muted" autoplay="autoplay" loop="loop">
+    <source src="videos/Drive-2.mp4" type="video/mp4">
+  </video>
+</div>
+<div>
+  <video id="choiceTwoNeutral" onClick="buttonTwo()" onMouseOver="choiceTwoText()" preload="auto" muted="muted" autoplay="autoplay" loop="loop">
+    <source src="videos/Drive-1.mp4" type="video/mp4">
+  </video>
+</div>
+<div>
+  <video id="choiceThreeNeutral" onClick="buttonThree()" onMouseOver="choiceThreeText()" preload="auto" muted="muted" autoplay="autoplay" loop="loop">
+    <source src="videos/Drive-3.mp4" type="video/mp4">
+  </video>
+</div>
+<p id="caption">   </p>
+
+<script>
+
+var btn1 = document.getElementById("choiceOneNeutral");
+var btn2 = document.getElementById("choiceTwoNeutral");
+var btn3 = document.getElementById("choiceThreeNeutral");
+
+var caption = document.getElementById("caption");
+
+function buttonOne() {
+		window.open ('scene2_1.html','_self',false)
+}
+
+function buttonTwo() {
+		window.open ('start.html','_self',false)
+}
+	
+function buttonThree() {
+		window.open ('scene1_1.html','_self',false)
+}
+
+function choiceOneText() {
+	caption.innerHTML = "talk to jacket guy"
+}
+
+function choiceTwoText() {
+	caption.innerHTML = "return to the start"
+}
+
+function choiceThreeText() {
+	caption.innerHTML = "go for a walk"
+}
+	
+</script>
+
+</body>
+</html>
