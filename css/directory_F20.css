@@ -1,0 +1,10 @@
+@charset "UTF-8";
+.list .notes {
+    width: 450px;
+    /* [disabled]border-style: solid; */
+    border-width: thin;
+    margin-left: 30px;
+}
+.message {
+    width: 850px;
+}
