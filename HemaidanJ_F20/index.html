@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/finalKNOWYOURROUNDHemaidan.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+	<div id="vidDisplay">
+      <video id="id" muted="muted" loop="loop" autoplay="autoplay">
+        <source src="video/null.webm" type="video/webm">
+      </video>
+    </div>
+	<div id="txtDisplay">
+		<p id="mainText">Please select a cartridge below to view technical and historical information</p>
+	</div>
+	<div id="icons">
+	<img id="icon1" onMouseOver="pstOverFunction()" onMouseOut="pstOutFunction();" onClick="pstPlayFunction();" src="thumb/thumbPST.jpg" width="1920" height="1080" alt=""/>
+	<img id="icon2" onMouseOver="rflOverFunction()" onMouseOut="rflOutFunction();" onClick="rflPlayFunction();" src="thumb/thumbRFL.jpg" width="1920" height="1080" alt=""/>
+	<img id="icon3" onMouseOver="intOverFunction()" onMouseOut="intOutFunction();" onClick="intPlayFunction();" src="thumb/thumbINT.jpg" width="1920" height="1080" alt=""/> 
+	</div>
+	<div id="essay">
+<p id="textTitle"></p>
+		<p id="essayBody1"></p>
+		<p id="essayBody2"></p>
+		<p id="essayBody3"></p>
+		<p id="essayBody4"></p>
+		<p id="essayBody5"></p>
+		<p id="essayBody6"></p>
+		<p id="essayBody7"></p>
+		<p id="essayBody8"></p>
+		<p id="endText"></p>
+</div>
+</body>
+<script>
+	var pistThumb = document.getElementById("icon1")
+	var riflThumb = document.getElementById("icon2")
+	var intmThumb = document.getElementById("icon3")
+	var textBox = document.getElementById("mainText")
+	var videoDisplay = document.getElementById("id")
+	var makarov = "video/makarov.webm"
+	var rimmed = "video/54r.webm"
+	var ak = "video/762x39.webm"
+	var essay1 = document.getElementById("essayBody1")
+	var essay2 = document.getElementById("essayBody2")
+	var essay3 = document.getElementById("essayBody3")
+	var essay4 = document.getElementById("essayBody4")
+	var essay5 = document.getElementById("essayBody5")
+	var essay6 = document.getElementById("essayBody6")
+	var essay7 = document.getElementById("essayBody7")
+	var essay8 = document.getElementById("essayBody8")
+	var essayEnd = document.getElementById("endText")
+	var title = document.getElementById("textTitle")
+	var textCount = 1; 
+
+	function pstOverFunction(){
+		console.log("over Pistol")
+		pistThumb.style.filter = "greyscale(0%)";
+		pistThumb.src = "thumb/thumbPSTOVER.jpg"
+	}
+	function pstOutFunction(){
+		console.log("out Pistol")
+		pistThumb.src = "thumb/thumbPST.jpg"
+	}
+	function pstPlayFunction(){
+		console.log("play Pistol")
+		videoDisplay.src = makarov;
+		textBox.style.fontSize = "14.8pt"
+		textBox.innerHTML = "The story of the 9mm Makarov, designated officially as the 9x18mm Makarov, is one that stems out of possible conflict rather than any ongoing campaign. The round was designed as a replacement to the World War II standard 7.62x25mm Tokarev, basing its original design off of the German 9x18mm Ultra cartridge. The main goal of the design and production of the 9mm Makarov round was with its proprietary state; The Soviets designed the round to be different enough from the standard 9mm Luger NATO round to prevent NATO forces, in the case of an escalation of the Cold War, from being able to utilize the rounds if they happened to be captured."
+		title.innerHTML = "TO WAR IS MAN"
+		essay1.innerHTML = "Humanity has warred with one another in individual, tribal, and national conflicts since we descended from the trees in the savannas. Even as far back as four-hundred thousand years ago, mankind has attempted to and successfully ended their fellow man’s lives in the struggle towards a set of short term needs for the continued existence of ones’ self or a singular long-term goal for a community. However, what separates human conflict from the conflicts of beasts? Every creature, from the smallest bacterium to the largest of the blue whales, participates in a conflict to continue its own existence. Every organism on the planet has developed different genetic advantages, small strategic enhancements in the evolutionary process, to fortify and arm itself in the constant conflict for the sole purpose of survival and the continuation of its own kind. This is a conflict that stretches back to the beginning of life on Earth itself, in the primordial soup that could be better described as a bacterial slaughter-ground. For three and a half billion years, the fauna and flora of this floating rock have consistently existed within a state of defense and offense, predator versus pray, with the reward being life or death itself. However, Mankind as a whole exists above the conflict in another realm of struggle, one in which is defined by the sentience in which we all have. The animal struggles to survive solely to survive, and at one point, our ancient primate ancestors struggled for the very same basic reason. Survival, then the continued survival of those that we had bred into existence."
+		essay2.innerHTML = "Enter enlightenment. The moment Mankind grew from the simple life of the savannah, moved to new regions and evolved further and further beyond what any other creature on the planet was capable of doing, was the moment that War became a concept that existed above the natural strife of life as a whole. The moment the idea of a more complex community sprung into the ever-advancing minds of our ancestors, the moment tribes began to look to the stars, the moment when the question “Why?” was asked in some forgotten, ancient tongue, these were the moments that would lay the foundation for true Humanity, and with it came the terrible and intricate dealings of War. Instead of fighting merely for survival, in which some conflicts in the modern era of human civilizations would be fought for, Wars were fought to maintain structures of power, as if survival had been exchanged with the maintaining of government systems, trading the survival of man for the survival of man-made power structures. More than two and half millennia before the birth of Christ, the first recorded conflict in history reflected this shift when Sumerians clashed with the Elamites in ancient Mesopotamia. War had existed far before this, no doubt, and if the ancient stories of the Native American tribes are to be believed, War was a concept that was carried in tow with the nomadic tribes that crossed the dry Bering strait. Tribes, communities, cities, and government powers, all of these systems brought about by the first great enlightenment all of those many millennia ago were integral to the foundations of warfare."
+		essay3.innerHTML = "What does this have to do with the rounds listed above? Warfare is far older than the existence of gunpowder, why only show this specific kind of weaponry? There have been bladed weapons, clubs, and even ancient projectile based weapons like the bow and arrow and the ancient atlatl which were both utilized from the ancient Paleolithic era to as recently as the Vietnam War. So why the gun, why the ball and powder? I have chosen these things, specifically the ammunition for rifles and guns in general, because I believe that no other weapon of war can represent the frighteningly swift ingenuity that humanity faces when in such a dire situation as a war. As the old adage says and continues to ring true,"
+		essay4.innerHTML = ""
+		essay5.innerHTML = ""
+		essay6.innerHTML = ""
+		essay7.innerHTML = ""
+		essay8.innerHTML = ""
+		essayEnd.innerHTML = "“Necessity is the mother of invention.” - Plato, The Republic"
+		}
+	function rflOverFunction(){
+		console.log("over Rifle")
+		riflThumb.style.filter = "grayscale(0%)"
+		riflThumb.src = "thumb/thumbRFLOVER.jpg"
+	}
+	function rflOutFunction(){
+		console.log("out Rifle")
+		riflThumb.src = "thumb/thumbRFL.jpg"
+	}
+	function rflPlayFunction(){
+		console.log("play Rifle")
+		videoDisplay.src = rimmed;
+		title.innerHTML = "TO INNOVATE IS MAN"
+		textBox.style.fontSize = "14.8pt"
+		textBox.innerHTML = "The 7.62x54mmR cartridge is an ancient round was the result of a nation that realized that the rest of the world was modernizing much faster than it was. In the late 19th century, the Russian Empire realized that it had fallen behind many of its European counterparts when it came to the modernization of their military. The Mosin-Nagant, the bolt-action rifle that was produced to replace the antiquated Berdan single-shot rifles, was designed in tandem with the 7.62x54mmR cartridge, both in which were adopted by the Russian military in 1891. However, no one in Imperial Russia could have known that the 7.62x54mmR cartridge would carry on in military for over a hundred and twenty years, the round and the rifle still found in conflicts all over the world."
+		essay1.innerHTML = "Innovation is human, and one of the greatest stories of innovation, one that rides alongside the advancements of locomotive technology and medicine, begins with a simple mixture of chemicals in nineth century China. A simple mixture of sulfur, charcoal and saltpeter conjured together by Chinese alchemists produced a material that burned quickly but did not explode immediately. Overtime, this powder, known as Black Powder or Gunpowder, quickly found use in the battlefields of the east. Some of the earliest forms of projectile-based weapons that utilized the powder began to show in the thirteenth century in the form of simplistic systems, such as tubes tied to extended weaponry such as spears. Soon enough, a somewhat more commonly understood silhouette of the cannon came into being, with one of the oldest examples of a small-arm being Chinese hand-cannon, built during the thirteenth century."
+		essay2.innerHTML = "However, the more commonly known arms that would use black powder would be developed in Europe. Trade, as a great spreader of other things than just goods, brought the knowledge of gunpowder to the western continent, and advances in firearms technology took root in the nation that would see its eventual advancement to what we recognize today as modern rifles and cannons. The first iterations of small arms that used gunpowder where the aptly named handguns, small, wrought iron tubes that the gunner would pack with powder and ammunition, and then fire from the hip. This technology, although evolutionary, was not up to snuff with the armaments of the time, considering the dangers and inefficiencies that came with being a hand-gunner, especially when thrust against the bow, which outpaced the hand-gun in terms of accuracy and effectiveness. A rough start, but time would see the technology ironed out in the later years of the fifteenth century."
+		essay3.innerHTML = "The Arquebus was one of the first major steps towards what we could consider a modern looking rifle. The gun itself came about in both European states and the Ottoman Empire during this time, its advantage and more refined design bringing a critical edge to the battlefields of the late and post medieval period. These guns utilized a system of ammunition that we may recognize from historical documentaries and films covering subjects of the time; a stock, a barrel, a trigger, and a simple mechanical system to bring a match to powder to ignite the charge in the barrel. The impact of the arquebus didn’t go unnoticed on the battlefield, with what was considered to be the most protective armors of the time failing to defend a wearer from the cast bullet of an arquebusier, an early term for a rifleman. Soon, in moves to modernize and better equip their armies, empires and kingdoms across the globe started scrambling for this new firearm technology to hold sway over their enemies. The introduction of the firearm and its capabilities had a tendency of shattering the traditional ways of certain countries, such as Japan, which was introduced to the arquebus through the Portuguese in the mid-sixteenth century, and in turn would play an extensive and decisive part in the Warring States period."
+		essay4.innerHTML = "Over time, from the late sixteenth century to before the American Civil War, this system of black powder and ball was the standard, although the gun and its mechanisms of lighting the powder to combust would change overtime, from the somewhat unreliable matchlock system to the complex wheel-lock system, and finally to the flintlock system, the most recognizable of the single-shot muzzle-loading action. During this time, the concept of the cartridge came into being, with shot, wad and powder being neatly wrapped into a single, small package that would accelerate loading times. It was the French, who would be responsible for more innovations in ammunition and firearms technology, that brough about the existence of the integrated cartridge, which involved copper caps, primer, powder, and shot all integrated together in a single pre-packaged paper or brass casing. The technology would spread far and wide, with most European states adopting this style of ammunition throughout the continent in the early to mid-nineteenth century."
+		essay5.innerHTML = "However, the mass adoption of brass cases wouldn’t come about until the Civil war, with breech-loading rifles accepting both paper and brass cartridges, the latter becoming the standard casing material to use. An issue, however, with these faster-loading rifles and their easier-to-load cartridges, started to come to the fore; the issue of fouling. Black powder, when fired from a gun, had a tendency to be smokey and especially dirty, decreasing the accuracy of sequential shots when fired continuously without cleaning. A solution once again came from France in the year 1884, with the introduction of smokeless powder in their 8mm Lebel cartridge. Smokeless powder, as the name implies, burned much cleaner than traditional gun powder, and therefore allowed the modernized systems of faster loading and firing to maintain accuracy when fired repeatedly. Soon enough, most major powers at the turn of the late nineteenth century scrambled to adopt this new form of propellant, and firearms and ammunition would forever be changed by the innovation of smokeless powder."
+		essay6.innerHTML = "For over half a decade, the standard ammunition for most major powers through most major conflicts, most importantly, maintained the usage of the fully powered rifle cartridge. However, through years of warfare in trenches, barbed wire, and the devastated cities and country-sides of 1940’s Europe, another problem was found; combat had changed with mechanization, becoming close and personal, almost like a reflection of the days of old before the gun. Modern military strategy demanded something more suited to the conditions in which wars were now being fought, and with the realization that pistol cartridges, which advanced under a very similar pattern as rifle cartridges, were more advantageous in some situations than their larger rifle-based counterparts. And so, with the innovation stemming out of Germany, the world was introduced to the intermediate cartridge, a cross breed between the close-quarters pistol ammunition dimensions and the dimensions of the long range but impractical rifle ammunition. Most, if not all, modern military rifles still utilize these cartridges, some famous examples being the Soviet 7.62x39mm round and the Belgian developed and American utilized 5.56x45mm NATO round. While the former has been replaced with the more modern 5.45x39mm round, the latter continues to serve as the main cartridge for most first and second world nations across the globe."
+		essay7.innerHTML = "However, as with all steps on the path of innovation, the intermediate cartridges of the modern world have found themselves tested against new experimental cartridges. One major stride in experimental ammunition was the testing of caseless ammunition, or ammunition that was integrated entirely by a solid mass of propellant. The most famous example of this would be the G11 project spearheaded by Heckler and Koch in the late twentieth century, developing the 4.73x33mm caseless cartridge. However, the concept of a caseless cartridge was not something new for the time, with the concept reaching all the way back to the nineteenth century with the rather unique but underpowered Volcanic .41 cartridge, in which had ammunition that contained the primer and charge in the base of the bullet itself. Heckler and Koch would find issues with the caseless ammunition, and since then the move towards caseless ammunition has been shelved. However, other advancements in ammunition technologies, such as electronically primed ammunition, have been dabbled in during the twenty-first century."
+		essay8.innerHTML = "Where ammunition and firearms technology will go from here is uncertain, although experiments in electro-magnetic means of firing projectiles might see the end to combustive materials as a means of propellant. One thing, however, is certain; Wherever the means of sending a projectile from barrel to target, the end goal for advancing technologies will always be brought to the fore of the battlefield with the intention of ending those wars as efficiently and as quickly as possible."
+		essayEnd.innerHTML = "“To fight and conquer in all our battles is not supreme excellence; supreme excellence consists in breaking the enemy's resistance without fighting.” - Sun Tzu, The Art of War"
+	}
+	function intOverFunction(){
+		console.log("over Intermediate")
+		intmThumb.src = "thumb/thumbINTOVER.jpg"
+		
+	}
+	function intOutFunction(){
+		console.log("out Intermediate")
+		intmThumb.src = "thumb/thumbINT.jpg"
+	}
+	function intPlayFunction(){
+		console.log("play Intermediate")
+		textBox.style.fontSize = "14.8pt"
+		videoDisplay.src = "video/76239.webm"
+		title.innerHTML = "TO PEACE IS MAN"
+		textBox.innerHTML = "The 7.62x39mm Cartridge is a mid-World War II design that has led a striking through most of the cold war, the round itself still being used in some modern militaries. It is an intermediate cartrdige, a kind of round that tackled the issue of modern war-fighting tactics, filling a gap where fully-powered rifle rounds and short-range pistol rounds could not fill. Taking design cues from the German 7.93x33 Kurz cartridge, the 7.62x39 would be the round of the Soviet world, only being replaced forty-one years later by its successor, the 5.45x39mm round. Out of the all the rifles produced to use the 7.62x39, none is more widespread and as infamous as the AK-47 and its variants. The AK-47 remains as the most produced rifle in the world, with an estimated 150 million in ciruclation around the globe."
+		essay1.innerHTML = "For these last paragraphs, we have focused entirely on the concept of War being an inherently Human thing, something born from our unique natural need to conflict with one another in a large, coordinated scale. This has been evident, as we have already seen, with the ancient conflicts that arise from simple tribal disputes to some of the first recorded battles to have taken place between the civilizations that blossomed from the Bronze Age. However, as War is as unique to humanity as is our own self-awareness, there is another concept which remains equally unique; Peace."
+		essay2.innerHTML = "Each conflict that mankind had roused itself into partaking in, no matter the size of each combating force, has always been directed towards the end of that war, to a conclusion to the hostilities to reach a higher goal beyond the fighting itself. There are some exceptions to this rule, wars in which were carried out only for the sake of trying to prove some point by partaking in it, the Great War being one of the most brutal and costly examples, but there is always an end in which is sought after by the will of coordinated diplomacy and efficient strategy. There is an end to war in which, despite the apparent will those who partake in War to destroy and annihilate, exists as the opposite state in which war exists, and the reasons for War to begin and continue are all in combined interests to achieve a certain kind of peace, be it in the favor of the combined leagues of nations, a singular nation, or even a group within the nation itself. War is fought to end war, to strive towards a goal which unfortunately has to be toiled towards with blood, iron and shot."
+		essay3.innerHTML = "However, with the innovations of how warfare is fought, we have seen how the effects of a war are so undesirable that the movement towards it is almost entirely undesirable. This is because of the Nuclear threat, that looming danger that exists in silos across the world, all waiting in the hands of contesting nations to be used as a last resort, the regretful aggression or the defiant last strike of countries in which have been eyeing each other for the last eighty years. Wars are still fought, yes, but we can see a continuous pattern in which either one or both participants of the war, be it a certain group or nations, are ones who fight these wars without the looming threat of nuclear intervention being a consequence of that war, and so can wage against one another by more conventional means. Even then, between nations that fight one another without that looming consequence of inevitable human extinction looming above their decisions, there is still the end goal of peace, and modern military technology has only brought that goal closer and closer. Medical technology saves the lives of wounded soldiers on the field, weapons have been designed to be as efficient on the battlefield as possible, and wars are now swift and brutal occurrences with often quick conclusions, with one of the most recent examples to date being the Armenia-Azerbaijan war, a war that thankfully only lasted for a scant forty-four days and ended in November of this year."
+		essay4.innerHTML = "War is a deadly, bloody and destructive thing, and many would be right to reject its presence from the world. However, war is one of the monumental forces that shifts history on a continuously progressive path. War is a breaker of stagnancy, a violent turmoil that brings about new innovations, draws new lines in social and ethnic groups, spreads or quashes beliefs, and so on. It is a force that is as powerful as its opposite, as the goal in which War is fought for in the first place, Peace. These two things, so inherently human, should be recognized as such, and we should reflect upon the changes in which war has brought about during the history of the human species with a much more appreciative lens for how much it has changed. We should also look at ourselves as a species and understand that no matter how much we try to deny that we would ever repeat what we consider to be the mistakes of waging war, we are inevitably bound to our nature to act upon our need to fight and change the world through conflict, and therefore should not reject it, but rather embrace it and understand the core of what War is, exhausting all means to resolve inevitable conflict before coming to terms with what we as a species must often to do thrust ourselves in the bloody path of human progress."
+		essay5.innerHTML = ""
+		essay6.innerHTML = ""
+		essay7.innerHTML = ""
+		essay8.innerHTML = ""
+		essayEnd.innerHTML = "“It is not enough to win a war; it is more important to organize the peace.” - Aristotle"
+		
+		
+	}
+
+	
+	
+	
+</script>
+</html>
