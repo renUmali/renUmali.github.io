@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Transit</title>
+<link href="css/final.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/dancing-script:n4:default;dynalight:n4:default;sofia:n4:default;alexa-std:n4:default;anonymous-pro:n4:default;electrolize:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class = "container">
+	<video id="gazeVideo" onEnded="swapVid()"><source src="videos/doors_open.mp4" type="video/mp4"></video>
+	<video id = "loopVideo"><source src = "videos/static.mp4"></video>
+	<video id = "planetVideo" onEnded="returnToLoop()"><source src = "videos/planet_pass_big.mp4"></video>
+</div>
+<div class ="prefix">
+	<button id ="preButton" onClick="enter()">Open</button>
+</div>
+<div class id = "task">
+	<div class id = "numberPrompt">
+		<p id = "goal">25462</p>
+	</div>
+	<div class id = "display">
+		<p id = "current">Match</p>
+	</div>
+	<div class id = "taskButtons">
+		<img src="videos/task.png" width="1920" height="1080" alt=""/>
+		<div class id = "topButtons">
+			<button onClick = "input(1)">1</button>
+			<button onClick = "input(2)">2</button>
+			<button onClick = "input(3)">3</button>
+		</div>
+		<div>
+			<button onClick = "input(4)">4</button>
+			<button onClick = "input(5)">5</button>
+			<button onClick = "input(6)">6</button>
+		</div>
+		<div>
+			<button onClick = "input(7)">7</button>
+			<button onClick = "input(8)">8</button>
+			<button onClick = "input(9)">9</button>
+		</div>
+		
+	</div>
+	
+ </div>
+<button id = "idle" onClick = "openPanel()">Wait</button>
+<div class = "dialog">
+
+	<button id ="nextButton" onClick="nextLine()">Listen</button>
+  <p id="language"></p>
+
+</div>
+<audio id="song" loop="loop" >
+  <source src = "videos/song.mp3">
+</audio>
+<audio id = "beep">
+	<source src = "videos/beep.wav">	
+</audio>
+<script>
+	var preButton = document.getElementById("preButton");
+	var preP = document.getElementById("preP");
+	var gaze = document.getElementById("gazeVideo");
+	var nextButton = document.getElementById("nextButton");
+	var language = document.getElementById("language");
+	var dialog = 0;
+	var line = -1;
+	var planetVideo = document.getElementById("planetVideo");
+	var loopVideo = document.getElementById("loopVideo");
+	var currentVid;
+	var current = document.getElementById("current");
+	var goal = document.getElementById("goal");
+	var value = 0;
+	var len = 0;
+	var idle = document.getElementById("idle");
+
+		/*
+	#########################################
+	#										#
+	#			  Dialogue Code				#
+	#										#
+	#########################################
+	*/
+var d1 = ["Have you ever taken an elevator to an important, or even scary, event?",
+"Like you’re really nervous about arriving and you go into the elevator, push a button and for that moment it’s out of your control. Until the elevator arrives at the next floor all you can do is wait until you arrive.",
+"It’s weird. If you’re running late and then elevators can be the most annoying thing ever. You can’t control when they arrive or how many stops it will make. It’s just a moment were everything is truly out of your hand.",
+"It can be hard to not worry, or stress, about what’s happening next. To want time to slow down or speed up. There was a part of me that loved living in a building where I took the elevator every day because no matter what it forced me to stop for a moment and take a breath.",
+"It reminded me that no matter what time moves forward at its own pace, and I need to be okay with that.",
+"Being all the way out here now I think it helps me to not worry about time. I know that it took a lot of stress getting here, and that in the future there’ll be a lot of stress again, but right now all I can do is wait.",
+"I don’t want to talk too long though, I know you have things to get done."
+];
+var d2 = ["I  was thinking about back home.","Well “home” isn’t really the right word anymore.","I was thinking about when we were back on earth.","Life was so different then.","Especially when this whole thing got started.","We worked so hard to get here and everything was just a great big stressful mess!","Not there weren’t good parts. We were working hard but it was for a reason that we believed in. We were fighting for a change.","And now we’re all the way out here and it feels like our problems are so far away now.","We’re on this trip and we don’t know exactly how long it will take.","But part of me doesn’t even want to get there.","Because right here in this moment I know that things aren’t hectic, or scary.","Everything just is.","And I like that.","While it lasts.","Sorry for rambling about home—I mean earth again. We’re doing the right thing, I know we are.", "I’ll be stop now."];
+	
+var d3 = ["Do you ever think about “normal”?","I’m not sure if I’ve ever known what a “normal” life is like.","But maybe that’s just my perception, I hear stories about other people and cling to those ideas as “normal” because however they are is a way I want to be.","And by telling myself that that’s “normal” I’m telling myself that I was cheated out of it somehow.","At the same time I think it’s safe to assume that our lives haven’t been very “normal” at all! At least not recently.","But maybe this is “normal” now.","Or maybe nothing is. Out here there’s nothing to compare ourselves too. Other than memories.","But we left for a reason looking back probably does more harm than good right?","Even if I didn’t want to be here I am now, and I don’t think I could have done things differently.","And these stars really are beautiful.","I’m glad I have someone to share them with"];
+	var d4 = ["“You have all the time in the world”.","It’s a funny statement.","It can be comforting I guess.","Like when I felt as though my whole world was in a mess. It seemed like I was missing out on so much that made life life."," ”You have all the time in the world”","Maybe it’s wrong to impose deadlines on ourselves. I have to do this by then, that by when. A life is a long time","But life is also a finite time.","Maybe I should have fought more to do what I could as quickly as I could.","It’s honestly hard for me to come to terms with the idea that I can’t do everything.","I feel like there’s so much I want out of life but no matter how much I try I’ll need to choose what I really want to do.","And just accept that everything else will just not be a thing I get to experience.","All that being said…","I think it’s safe to assume no one has experienced THIS before! So I get one “first” over everyone else."
+];
+var d5 =["It’s weird to think of time out here. ",
+"All we can do is still keep counting seconds from the time we left earth but it’s really weird to think about  how abstract our measurements were. ",
+"Out here I can say it’s eight o’clock but I could only know because of the clocks on the ship. ",
+"It also says it’s Tuesday. ",
+"Tuesday, huh. I’m not sure. Is it really Tuesday when there are no days? ",
+"Especially when it feels like the days don’t matter. ",
+"We can wake up, eat, sleep, we have stuff to do, but when to do them? ",
+"Whenever it’s convenient? Should I still try to wake up at “six” in the morning because I did before? Even when there’s no sun to get up with? ",
+"And what’s a year for that matter? ",
+"365 days? That duration doesn’t mean anything out here. ",
+"So what can I say? That today the number of days old I am is divisible by 365? But then I remember “day” doesn’t mean anything either. ",
+"I feel sad, a lot, on my birthday. ",
+"I just always wanted to have one that really felt like a big occasion. Where I could say “this will be the best day of the year because it’s my birthday”. For it to really mean something special. ",
+"But I don’t think I ever got that. I celebrated, of course. Every year I did. But I always felt like something was missing, it was never a big thing and not many people even wished me a happy birthday. ",
+"And now that we’re out here birthdays don’t really mean anything. ",
+"I wonder if that means I missed it. The chance to make that kind of memory is gone now. "
+];
+var d6 =["Have you ever thought about the way you make choices?", "I’ve always tried to be as objective as possible when deciding what to do, what actions to take.", "I figured that if I made the best possible choice at any given moment that would mean I’d always end up in the best possible spot, and I’d leave the world in the best possible spot too.", "I think that was the most important part for me. Leaving the world as good as I could", "But that philosophy didn’t quite work with me. I followed it to the best I was able because I couldn’t think of a better way to go about making choices.", "But somehow I always had this inkling that I was wrong, that making the best choice at any given moment wouldn’t lead to the best outcome.", "And then I found out about the concept of local maxima.", "Basically how it goes is that you picture you’re moving across a line graph with a slope going up and down", "But if you always go in the direction that takes you higher you’ll get stuck as soon as there’s a peak. Because moving in any direction takes you further down you’ll never move.", "Even if there’s a peak twice as high a little further down you’ll never reach it unless you’re willing to go down first", "You’d never even know it was there.", "When I found out about that it changed the way I looked at the world and how I make choices.", "Come to think of it out here I kind of already “left the world”.", "Was it the best I could make it? I’m not sure.", "But there’s another one ahead of us, and I can try to make that one the best I can too."];
+
+var d7 = ["I honestly thought it was going to be worse, you know? ", "Traveling all the way out here. ", "I was afraid it was just going to be awful. ", "It’s weird how sometimes life just keeps moving on even after passing the point you couldn’t imagine passing. ", "It is hard sometimes though. ", "The quiet can get to me. ", "It makes me spend too much time in my head you know? ", "When I run out of things to distract me I end up thinking about all the things I dislike about myself. ", "Part of me wants to just get it out, find some way to express everything I’ve been holding back. But as soon as I try to articulate it I feel like I sound stupid. ", "Thanks for putting up with me, it’s nice to have someone to listen."];
+
+var d8 = ["Hey you know…","Oh, never mind. "];
+
+var d9 = ["I wonder how close we are to our destination.", "It feels like we've already been out here for such a long time.", "While some of the time was nice and peaceful it's hard to not get anxious for something new.", "It comes in waves. There are sudden bursts of impatience when all I can think about is not drifting through space.", "And then other times I'm just happy to enjoy the time passing.", "It's strange when I'm in one of those moments of impatience to realize that it will pass.", "I think that this feeling I have is absolute but in the back of my mind I know it's fleeting.", "And I wonder which I should listen too, the part of me that's compliant or the part that's dissatisfied.", "It's a tough question you know?", "Maybe they're both wrong and there's some other mindset I haven't thought of yet."];
+	
+
+	
+var allLines = [d1, d2, d3, d4, d5, d6, d7, d8, d9];
+	
+			/*
+	#########################################
+	#										#
+	#			Dialogue Code End			#
+	#										#
+	#########################################
+	*/
+	
+	function enter(){
+		console.log("entered")
+		preButton.style.visibility="hidden";
+		nextButton.style.visibility="visible";
+		;
+		song.play();
+		song.volume = 0.1;
+		gaze.play();
+		setTimeout(restoreNextButton, 20000);
+		setTimeout(passPlanet, Math.floor(Math.random()*30000)+25000);
+	}
+	
+	function swapVid(){
+		gaze.style.display="none";
+		gaze.volume = 0;
+		loopVideo.style.display="inline";
+	}
+	
+	function nextLine(){
+		var task = document.getElementById("task");
+		task.style.display="none"
+		idle.innerHTML = "Wait";
+		if(line < 0){
+			dialog =  Math.floor(Math.random()*allLines.length);
+			console.log(dialog)
+		}
+		var c = allLines[dialog]
+		if(line < c.length-1){
+			++line;
+			language.innerHTML = c[line];
+		} else{
+			line = -1;
+			language.innerHTML = "";
+			nextButton.style.display = "none";
+			restoreIdleButton();
+			var wait =  Math.max(Math.floor(Math.random()*30000),20000);
+			setTimeout(restoreNextButton, wait);
+		}	
+	
+	}
+
+	function restoreNextButton(){
+		nextButton.style.display = "inline";
+	}
+	
+	function restoreIdleButton(){
+		idle.style.display = "inline";
+		idle.style.visibility="visible";
+	}
+	
+	function openPanel(){
+		var task = document.getElementById("task");
+		if (idle.innerHTML == "Wait"){
+			task.style.display="inline"
+			idle.innerHTML = "Close";
+		} else {
+			task.style.display="none"
+			idle.innerHTML = "Wait";
+		}
+	}
+	
+	function passPlanet(){
+		console.log("planet pass");
+		currentVid = planetVideo;
+		var r = Math.floor(Math.random()*3);
+		switch(r){
+			case 0:
+				planetVideo.src = "videos/meteor_pass.mp4";
+				break;
+			case 1:
+				planetVideo.src = "videos/planet_pass_big.mp4";
+				break;
+			case 2:
+				planetVideo.src = "videos/planet_pass_small.mp4";
+				break;
+			default: 
+				break;
+		}
+		planetVideo.style.display = "inline";
+		planetVideo.pause();
+		/*added a buffer to give the video a second to load*/
+		setTimeout(planetPassBuffer, 1000);
+	}
+	
+	function planetPassBuffer(){
+		console.log("buffer");
+		loopVideo.style.display = "none";
+		planetVideo.play();
+	}
+	
+	function returnToLoop(){
+		loopVideo.style.display = "inline";
+		currentVid.style.display = "none";
+		setTimeout(passPlanet, Math.floor(Math.random()*50000)+25000);
+	}
+	
+	function input(v){
+		console.log(v);
+
+		value = value * 10 + v;
+		current.innerHTML = value;
+		++len;
+		if(len >= 5){
+			check();
+		}
+	}
+	
+	function check(){
+		console.log("checked");
+		if (current.innerHTML == goal.innerHTML){
+			newGoal();
+			current.innerHTML = "Match";
+			var beep = document.getElementById("beep");
+			beep.play();
+		} else {
+			current.innerHTML = "";
+		}
+		len = 0;
+		value = 0;
+	}
+	
+	function newGoal(){
+		goal.innerHTML = "";
+		for (i = 0; i < 5; i++) {
+  		var nextChar = Math.floor(Math.random()*9)+1;
+		goal.innerHTML = goal.innerHTML + nextChar;
+		}
+}
+
+</script>
+</body>
+</html>
