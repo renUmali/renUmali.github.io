@@ -1,0 +1,19 @@
+.windowFrame video {
+    position: absolute;
+	overflow: hidden;
+}
+.windowFrame #v1 {
+    clip-path: inset(0% 75% 0% 0%);
+}
+
+.windowFrame #v2 {
+    clip-path: inset(0% 50% 0% 25%);
+}
+
+.windowFrame #v3 {
+	clip-path: inset(0% 25% 0% 50%)
+}
+
+.windowFrame #v4 {
+	clip-path: inset(0% 0% 0% 75%)
+}
