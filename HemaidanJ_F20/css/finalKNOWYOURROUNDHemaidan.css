@@ -1,4 +1,11 @@
 @charset "utf-8";
+body {
+    background-image: -webkit-linear-gradient(270deg,rgba(147,147,147,1.00) 0%,rgba(255,255,255,1.00) 27.46%);
+    background-image: -moz-linear-gradient(270deg,rgba(147,147,147,1.00) 0%,rgba(255,255,255,1.00) 27.46%);
+    background-image: -o-linear-gradient(270deg,rgba(147,147,147,1.00) 0%,rgba(255,255,255,1.00) 27.46%);
+    background-image: linear-gradient(180deg,rgba(147,147,147,1.00) 0%,rgba(255,255,255,1.00) 27.46%);
+    background-repeat: repeat;
+}
 #icons #icon1 {
     width: 30%;
     height: 10%;
@@ -21,30 +28,37 @@
     filter: grayscale(100%);
 }
 #txtDisplay {
-    width: 1540px;
-    height: 103px;
-    margin-top: 15px;
+    /* [disabled]width: 1540px; */
+    /* [disabled]height: 103px; */
+    /* [disabled]margin-top: 15px; */
     margin-bottom: 0px;
-    margin-left: 161px;
-}
-#txtDisplay #mainText {
-    font-size: 25.8pt;
+    /* [disabled]margin-left: 161px; */
     text-align: center;
 }
-#vidDisplay #id source {
-}
-#vidDisplay {
-    max-width: 1280px;
-    max-height: 720px;
+#vidDisplay #id {
+    width: 600px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
-    margin-left: 293px;
+    max-width: 600px;
+    max-height: auto;
+}
+#txtDisplay #mainText {
+    font-size: 26px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    max-width: 800px;
 }
 #essay {
     text-align: center;
-    max-width: 691pt;
+    max-width: 700px;
     position: static;
     left: 0px;
-    margin-left: 465px;
+    margin-left: auto;
+    margin-right: auto;
 }
 #essay #textTitle1 {
     font-size: xx-large;
@@ -59,13 +73,6 @@
     font-weight: bold;
     font-size: x-large;
     font-style: oblique;
-}
-body {
-    background-image: -webkit-linear-gradient(270deg,rgba(147,147,147,1.00) 0%,rgba(255,255,255,1.00) 27.46%);
-    background-image: -moz-linear-gradient(270deg,rgba(147,147,147,1.00) 0%,rgba(255,255,255,1.00) 27.46%);
-    background-image: -o-linear-gradient(270deg,rgba(147,147,147,1.00) 0%,rgba(255,255,255,1.00) 27.46%);
-    background-image: linear-gradient(180deg,rgba(147,147,147,1.00) 0%,rgba(255,255,255,1.00) 27.46%);
-    background-repeat: repeat;
 }
 #essay #endText {
     font-weight: bold;
@@ -98,20 +105,4 @@ body {
     font-size: x-large;
     color: rgba(255,255,255,1.00);
     display: inline-block;
-}
-#essay #essayBody1 {
-}
-#essay #essayBody2 {
-}
-#essay #essayBody3 {
-}
-#essay #essayBody4 {
-}
-#essay #essayBody5 {
-}
-#essay #essayBody6 {
-}
-#essay #essayBody7 {
-}
-#essay #essayBody8 {
 }
