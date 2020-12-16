@@ -1,0 +1,248 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>final project</title>
+<link href="css/final_project.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	
+<h1>Elm Grove</h1>
+	
+<p id = "caption">a portrait of my hometown</p>
+	
+<div class = "row1">
+<video id="vid1" onMouseOver="signFunction()" onMouseOut="vid1Out()" onClick="pause1Function()" preload="auto" autoplay="autoplay" loop="loop" >
+    <source src="final videos/parkSign.mp4" type="video/mp4">
+</video>
+<video id="vid2" onMouseOver="vid2Function()" onMouseOut="vid2Out()" onClick="pause2Function()"  autoplay="autoplay" loop="loop" >
+  <source src="final videos/library.mp4" type="video/mp4">
+</video>
+<video id="vid3" onMouseOver="vid3Function()" onMouseOut="vid3Out()" onClick="pause3Function()"  autoplay="autoplay" loop="loop" >
+  <source src="final videos/EGsign.mp4" type="video/mp4">
+</video>
+</div>
+	
+<div class = "row1">
+<video id="vid4" onMouseOver="vid4Function()" onMouseOut="vid4Out()" onClick="pause4Function()" preload="auto" autoplay="autoplay" loop="loop" >
+    <source src="final videos/parkingLot.mp4" type="video/mp4">
+</video>
+<video id="vid5" onMouseOver="vid5Function()" onMouseOut="vid5Out()" onClick="pause5Function()"  autoplay="autoplay" loop="loop" >
+  <source src="final videos/street.mp4" type="video/mp4">
+</video>
+<video id="vid6" onMouseOver="vid6Function()" onMouseOut="vid6Out()" onClick="pause6Function()"  autoplay="autoplay" loop="loop" >
+  <source src="final videos/plaque.mp4" type="video/mp4">
+</video>
+</div>
+	
+<div class = "row1">
+<video id="vid7" onMouseOver="vid7Function()" onMouseOut="vid7Out()" onClick="pause7Function()" preload="auto" autoplay="autoplay" loop="loop" >
+    <source src="final videos/postOffice.mp4" type="video/mp4">
+</video>
+<video id="vid8" onMouseOver="vid8Function()" onMouseOut="vid8Out()" onClick="pause8Function()" autoplay="autoplay" loop="loop" >
+  <source src="final videos/hangingSign.mp4" type="video/mp4">
+</video>
+<video id="vid9" onMouseOver="vid9Function()" onMouseOut="vid9Out()" onClick="pause9Function()" autoplay="autoplay" loop="loop" >
+  <source src="final videos/rain.mp4" type="video/mp4">
+</video>
+</div>
+	
+<script>
+	
+var vid1 = document.getElementById("vid1");	
+var vid2 = document.getElementById("vid2");
+var vid3 = document.getElementById("vid3");
+var vid4 = document.getElementById("vid4");
+var vid5 = document.getElementById("vid5");
+var vid6 = document.getElementById("vid6");
+var vid7 = document.getElementById("vid7");
+var vid8 = document.getElementById("vid8");
+var vid9 = document.getElementById("vid9");
+	
+function signFunction(){
+	console.log=("vid1Function works")
+	caption.innerHTML = "Although this sign is a village landmark, it holds some negative memories for me. Over the course of my senior year of high school, I spent countless hours in that shopping center in my first and hopefully only retail job. The annoying customers made it practically unbearable, but the memories are starting to lose their sour taste."
+	vid1.volume=1;
+}
+	
+function vid1Out(){
+	caption.innerHTML = ""
+	vid1.volume=0;
+}
+	
+function pause1Function(){
+	vid1.volume=0;
+	if (vid1.paused){
+		vid1.play();
+	}
+	else{
+		vid1.pause();
+	}
+}
+	
+	
+function vid2Function(){
+	caption.innerHTML = "There’s a strong feeling of community here. To me, the libraries scattered around the village are a great example of that. People can leave their well-loved books around the village in hopes that someone new will pick it up and leave one of their own old favorites. Although I haven’t taken a book yet because I always forget to grab one as a replacement, I always peak in when I pass them."
+	vid2.volume=1;
+}
+	
+function vid2Out(){
+	caption.innerHTML = ""
+	vid2.volume=0;
+}
+	
+function pause2Function(){
+	vid2.volume=0;
+	if (vid2.paused){
+		vid2.play();
+	}
+	else{
+		vid2.pause();
+	}
+}
+	
+function vid3Function(){
+	caption.innerHTML = "This town has all of the charm of a neighborhood you’d find in a Hallmark movie, and a lot of the residents will do anything to keep it. No big box store or apartment complex will get built without a fight."
+	vid3.volume=1;
+}
+	
+function vid3Out(){
+	caption.innerHTML = ""
+	vid3.volume=0;
+}
+	
+function pause3Function(){
+	vid3.volume=0;
+	if (vid3.paused){
+		vid3.play();
+	}
+	else{
+		vid3.pause();
+	}
+}
+	
+function vid4Function(){
+	caption.innerHTML = "Even in open areas, this village feels small. It feels as if I’ve hardly moved outside the two square miles that make it up. Of course, that feeling is even stronger now that it’s mostly true. The town mostly shut down back in March, but by the end of the summer, people were back at O’Donoghue’s every Friday night."
+	vid4.volume=1;
+}
+	
+function vid4Out(){
+	caption.innerHTML = ""
+	vid4.volume=0;
+}
+	
+function pause4Function(){
+	vid4.volume=0;
+	if (vid4.paused){
+		vid4.play();
+	}
+	else{
+		vid4.pause();
+	}
+}
+	
+function vid5Function(){
+	caption.innerHTML = "The village is usually quite quiet. Police officers often have nothing better to do than pull drivers over for disobeying the village-wide speed limit of 25 miles per hour. Our crime rate is 3.9 times smaller than the national average, but the police officer to resident ratio is higher than Wisconsin’s average."
+	vid5.volume=1;
+}
+	
+function vid5Out(){
+	caption.innerHTML = ""
+	vid5.volume=0;
+}
+	
+function pause5Function(){
+	vid5.volume=0;
+	if (vid5.paused){
+		vid5.play();
+	}
+	else{
+		vid5.pause();
+	}
+}
+	
+function vid6Function(){
+	caption.innerHTML = "This village has only been around for 65 years, but it holds a lot of history. I’ve only been here for ten of those 65 years, but that’s the majority of my life. I’ve made and lost friends here, gone through milestones like graduation, and started to figure out who I am. I’ve experienced loss. This is my home."
+	vid6.volume=1;
+}
+	
+function vid6Out(){
+	caption.innerHTML = ""
+	vid6.volume=0;
+}
+	
+function pause6Function(){
+	vid6.volume=0;
+	if (vid6.paused){
+		vid6.play();
+	}
+	else{
+		vid6.pause();
+	}
+}
+	
+function vid7Function(){
+	caption.innerHTML = "Although I have the privilege of a beautiful village, my small-town experience is similar to most. There’s not much to do, even when things are normal. I end up spending my time doing the same few things over, and over, and over: pick up a book at the library, grab a coffee at Stone Creek, loiter at Target until I feel like going home again."
+	vid7.volume=1;
+}
+	
+function vid7Out(){
+	caption.innerHTML = ""
+	vid7.volume=0;
+}
+	
+function pause7Function(){
+	vid7.volume=0;
+	if (vid7.paused){
+		vid7.play();
+	}
+	else{
+		vid7.pause();
+	}
+}
+	
+function vid8Function(){
+	caption.innerHTML = "Most of the time, I’m glad I’m here too. But sometimes, it’s hard to shake the feeling that I’m missing out. I’d rather be in a city somewhere going on adventures or even just seeing my friends face-to-face. But for now, I have to be glad that I’m home."
+	vid8.volume=1;
+}
+	
+function vid8Out(){
+	caption.innerHTML = ""
+	vid8.volume=0;
+}
+	
+function pause8Function(){
+	vid8.volume=0;
+	if (vid8.paused){
+		vid8.play();
+	}
+	else{
+		vid8.pause();
+	}
+}
+	
+function vid9Function(){
+	caption.innerHTML = "When the weather is nice, I’m glad to get out of the house for a moment to just be somewhere else for a little while. When it rains, sometimes I’m glad to have an excuse to lay down with a good book, but sometimes I wish I could be anywhere else."
+	vid9.volume=1;
+}
+	
+function vid9Out(){
+	caption.innerHTML = ""
+	vid9.volume=0;
+}
+	
+function pause9Function(){
+	vid9.volume=0;
+	if (vid9.paused){
+		vid9.play();
+	}
+	else{
+		vid9.pause();
+	}
+}
+	
+</script>
+	
+</body>
+</html>
