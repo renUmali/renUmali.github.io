@@ -1,0 +1,70 @@
+#vid1 {
+    width: 400px;
+    height: auto;
+}
+#line01_verbial {
+    font-family: averia-gruesa-libre;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+}
+#line01_preposition {
+    font-family: averia-gruesa-libre;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+}
+#line01_descriptor {
+    font-family: averia-gruesa-libre;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+}
+#line01_noun {
+    font-family: averia-gruesa-libre;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+}
+#vid1 {
+    width: 600px;
+    height: auto;
+}
+body h1 {
+    font-family: amatic-sc;
+    font-style: normal;
+    font-weight: 400;
+    margin-left: 79px;
+    font-size: 57px;
+    font-variant: normal;
+    width: 439px;
+    height: auto;
+    margin-top: 4px;
+    margin-bottom: -3px;
+}
+body p {
+    width: 509px;
+    height: auto;
+    font-family: amatic-sc;
+    font-style: normal;
+    font-weight: 400;
+    font-size: x-large;
+    margin-left: 139px;
+    margin-top: -8px;
+    margin-bottom: 5px;
+    min-width: 600px;
+}
+.sentence {
+    width: 986px;
+    height: auto;
+    margin-bottom: 45px;
+    margin-top: 20px;
+    min-width: 778px;
+    margin-left: -85px;
+}
+.sentence p {
+    width: 437px;
+    height: auto;
+    margin-bottom: -14px;
+    margin-left: 91px;
+}
