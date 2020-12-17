@@ -1,0 +1,241 @@
+@charset "utf-8";
+body {
+    paddington: 0;
+}
+#Webpage {
+    /* [disabled]max-width: 100%; */
+    /* [disabled]min-width: 100%; */
+    margin: auto;
+    width: 960px;
+
+}
+
+#Header {
+    font-family: kristi;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 80px;
+    text-transform: none;
+    position: relative;
+}
+
+
+
+#finishedPancakes {
+    width: 100%;
+    height: auto;
+    border-width: thick;
+    border-style: solid;
+    border-radius: 60px;
+    position: relative;
+}
+#Header2 {
+    font-family: kristi;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 40px;
+    text-transform: none;
+    position: relative;
+}
+#pancaes {
+    position: relative;
+    width: 100%;
+}
+
+#ChefBlair  {
+    width: 500px;
+    height: 500px;
+    border: thick solid #970916;
+    border-radius: 300px;
+    position: relative;
+    left: 230px;
+}
+#Bio  {
+    border: thick solid #970916;
+    width: 486px;
+    height: 90px;
+    position: relative;
+    left: 230px;
+}
+#BioQuotes  {
+    border: thick solid #970916;
+    width: 486px;
+    height: 90px;
+    position: relative;
+    left: 230px;
+}
+#Intro  {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    max-width: 2000px;
+    position: relative;
+    font-size: xx-large;
+}
+
+
+
+#Header3 {
+    font-family: kristi;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+    /* [disabled]margin-bottom: 200px; */
+}
+#Header4 {
+    font-family: kristi;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 80px;
+    margin-top: 108px;
+}
+
+#Intro2 {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    font-size: xx-large;
+    /* [disabled]width: 500px; */
+    text-align: center;
+}
+#YouWillNeed {
+    font-family: kristi;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 0px;
+}
+#list {
+    text-align: center;
+    width: 155px;
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    font-size: x-large;
+}
+.Steps #dry {
+    position: relative;
+    width: 100%;
+
+
+
+
+
+
+}
+.Steps #dryP {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    border-width: thin;
+    border-style: solid;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
+.Steps #egg {
+    position: relative;
+    width: 100%;
+}
+.Steps #eggP {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    border-width: thin;
+    border-style: solid;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
+.Steps #fold {
+    position: relative;
+    width: 100%;
+}
+.Steps #foldP {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    border-width: thin;
+    border-style: solid;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
+.Steps #lost {
+    position: relative;
+    width: 100%;
+}
+.Steps #lostP {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    border-width: thin;
+    border-style: solid;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
+
+.Steps #pour {
+    position: relative;
+    width: 100%;
+}
+.Steps #pourP {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    border-width: thin;
+    border-style: solid;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
+.Steps #char {
+    position: relative;
+    width: 100%;
+}
+.Steps #charP {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    border-width: thin;
+    border-style: solid;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
+.Steps #more {
+    position: relative;
+    width: 100%;
+}
+.Steps #moreP {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    border-width: thin;
+    border-style: solid;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
+.Steps #done {
+    position: relative;
+    width: 100%;
+}
+.Steps #doneP {
+    font-family: alegreya;
+    font-style: normal;
+    font-weight: 400;
+    border-width: thin;
+    border-style: solid;
+    text-align: center;
+    height: auto;
+    position: relative;
+}
