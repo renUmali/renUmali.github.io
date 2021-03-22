@@ -1,6 +1,6 @@
 (function (cjs, an) {
 
-var p; // shortcut to reference prototypes
+var p; // shortcut to reference prototypes // erase
 var lib={};var ss={};var img={};
 lib.ssMetadata = [
 		{name:"Kilcoyne_mid_atlas_1", frames: [[1282,0,117,34],[0,722,1548,140],[0,0,1280,720]]}
