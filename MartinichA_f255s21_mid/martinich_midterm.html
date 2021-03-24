@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>onmouseover</title>
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/cousine:n4:default;condiment:n4:default.js" type="text/javascript"></script>
+<link href="css/template_3x3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class = "rowOfImages">
+<img id="top1" onMouseOver="top1Function()" onMouseOut="top1OutFunction()" src="images/1.jpg" width="800" height="598" alt=""/>
+<img id="top2" onMouseOver="top2Function()" onMouseOut="top2OutFunction()" src="images/2.jpg" width="465" height="311" alt=""/>
+<img id="top3" onMouseOver="top3Function()" onMouseOut="top3OutFunction()" src="images/3.jpg" width="465" height="311" alt=""/>
+
+</div>
+
+<div class = "rowOfImages">
+<img id="mid1" onMouseOver="mid1Function()" onMouseOut="mid1OutFunction()" src="images/4.jpg" width="800" height="598" alt=""/>
+<img id="mid2" onMouseOver="changeTextFunction()" onMouseOut="changeTextOutFunction()" src="images/5.jpg" width="465" height="311" alt=""/>
+<img id="mid3" onMouseOver="mid3Function()" onMouseOut="mid3OutFunction()" src="images/6.jpg" width="465" height="311" alt=""/>
+</div>   
+<div class = "rowOfImages">
+<img id="bot1" onMouseOver="bot1Function()" onMouseOut="bot1OutFunction()" src="images/7.jpg" width="800" height="598" alt=""/>
+<img id="bot2" onMouseOver="bot2Function()" onMouseOut="bot2OutFunction()" src="images/8.jpg" width="465" height="311" alt=""/>
+<img id="bot3" onMouseOver="bot3Function()" onMouseOut="bot3OutFunction()" src="images/9.jpg" width="465" height="311" alt=""/>
+</div>   
+	
+<p id="caption">Who you are on the outside.</p>
+	
+<script>
+	
+var top1 = document.getElementById("top1");
+var top2 = document.getElementById("top2");
+var top3 = document.getElementById("top3");
+	
+function top1Function(){
+	console.log("1 works");
+	top1.style.filter="grayscale(100%)";
+}
+function top1OutFunction(){
+	console.log("1 out works")
+	top1.style.filter="grayscale(0%)";
+}
+function top2Function(){
+	console.log("2 works");
+	top2.style.filter="grayscale(100%)";
+}
+function top2OutFunction(){
+	console.log("2 out works")
+	top2.style.filter="grayscale(0%)";
+}
+function top3Function(){
+	console.log("3 works");
+	top3.style.filter="grayscale(100%)";
+}
+function top3OutFunction(){
+	console.log("3 out works")
+	top3.style.filter="grayscale(0%)";
+}
+
+var mid1 = document.getElementById("mid1");
+var mid2 = document.getElementById("mid2");
+var mid3 = document.getElementById("mid3");
+var message = document.getElementById("caption");
+	
+function mid1Function(){
+	console.log("4 works");
+	mid1.style.filter="grayscale(100%)";
+}
+function mid1OutFunction(){
+	console.log("4 out works")
+	mid1.style.filter="grayscale(0%)";
+}
+function changeTextFunction(){
+	message.innerHTML = "May not be who you are on the inside."
+}
+function changeTextOutFunction(){
+	message.innerHTML = "Who you are on the outside."
+}
+function mid3Function(){
+	console.log("6 works");
+	mid3.style.filter="grayscale(100%)";
+}
+function mid3OutFunction(){
+	console.log("6 out works")
+	mid3.style.filter="grayscale(0%)";
+}	
+	
+var bot1 = document.getElementById("bot1");
+var bot2 = document.getElementById("bot2");
+var bot3 = document.getElementById("bot3");
+	
+function bot1Function(){
+	console.log("7 works");
+	bot1.style.filter="grayscale(100%)";
+}
+function bot1OutFunction(){
+	console.log("7 out works")
+	bot1.style.filter="grayscale(0%)";
+}
+function bot2Function(){
+	console.log("8 works");
+	bot2.style.filter="grayscale(100%)";
+}
+function bot2OutFunction(){
+	console.log("8 out works")
+	bot2.style.filter="grayscale(0%)";
+}
+function bot3Function(){
+	console.log("9 works");
+	bot3.style.filter="grayscale(100%)";
+}
+function bot3OutFunction(){
+	console.log("9 out works")
+	bot3.style.filter="grayscale(0%)";
+}
+	
+	
+</script>
+
+</body>
+</html>
