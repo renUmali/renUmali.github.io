@@ -1,0 +1,39 @@
+@charset "utf-8";
+.base #cup {
+    position: static;
+}
+.base #changeImg {
+}
+.base #trashBag {
+}
+.base #laundry {
+    position: relative;
+}
+.base #oldTea {
+    position: relative;
+}
+.base #oldDrinks {
+    position: relative;
+}
+.base #changeImg {
+    position: absolute;
+    right: 625px;
+    top: 24px;
+
+}
+.base {
+}
+.topRow {
+    position: static;
+}
+.bottomRow {
+    position: absolute;
+    bottom: -178px;
+    left: -720px;
+}
+.base #text {
+    font-family: over-the-rainbow;
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: -1px 2px 4px #5E0001;
+}
