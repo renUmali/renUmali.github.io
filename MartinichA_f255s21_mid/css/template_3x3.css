@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+#caption {
+	border-left: medium solid #F49763;
+	border-right: medium solid #7DDCF0;
+	border-bottom: medium solid #A8ED71;
+	border-top: medium solid #897AEB;
+	min-height: 100px;
+	font-family: condiment;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 50px;
+	max-width: 600px;
+	text-align: left;
+	text-shadow: 0px 0px #32C1CA;
+	color: #EF445C;
+	-webkit-box-shadow: 0px 0px #B06EF0;
+	box-shadow: 0px 0px #B06EF0;
+	background-color: #DDC8E9;
+}
+.rowOfImages img{
+	width: 200px;
+	height: auto;
+	max-height: 200px;
+	filter: grayscale(0%);
+}
