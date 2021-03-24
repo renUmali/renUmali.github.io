@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Midterm_Brusky</title>
+<link href="css/Midterm_Brusky.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/english:n4,i4:default.js" type="text/javascript"></script>
+</head>
+	
+<h1>When The Shooting Starts, The Looting starts</h1>
+
+<body>
+<div class = "top row">
+  <img id="Force" onMouseOver="ForceFunction()" onMouseOut="ForceFunction()" src="images/1.JPG" width="1280" height="853" alt=""/> 
+  <img id="Flag" onMouseOver="FlagFunction()" onMouseOut="FlagFunction()" src="images/2.JPG" width="1280" height="719" alt=""/>
+  <img id="StandGround" onMouseOver="StandGroundFunction()" onMouseOut="StandGroundFunction()" src="images/3.JPG" width="1280" height="719" alt=""/>
+  <img id="Fist" onMouseOver="FistFunction()" onMouseOut="FistFunction()" src="images/4.JPG" width="1280" height="719" alt=""/>
+  <img id="Freeway" onMouseOver="FreewayFunction()" onMouseOut="FreewayFunction()" src="images/5.JPG" width="1280" height="719" alt=""/>
+  <img id="Park" onMouseOver="ParkFunction()" onMouseOut="ParkFunction()" src="images/6.JPG" width="1280" height="719" alt=""/>
+  <img id="Speedway" onMouseOver="SpeedwayFunction()" onMouseOut="SpeedwayFunction()" src="images/7.JPG" width="1280" height="719" alt=""/>
+  <img id="BLM" onMouseOver="BLMFunction()" onMouseOut="BLMFunction()" src="images/8.JPG" width="768" height="1024" alt=""/>
+  <img id="Gas" onMouseOver="GasFunction()" onMouseOut="GasFunction()" src="images/9.jpeg" width="1792" height="828" alt=""/>
+</div>
+<p id="caption">No one could hear their cries.</p>	
+	 
+<script>
+	
+var ForceImage = document.getElementById("Force");
+var FlagImage = document.getElementById("Flag");
+var StandGroundImage = document.getElementById("StandGround");
+var FistImage = document.getElementById("Fist");
+var FreewayImage = document.getElementById("Freeway");
+var ParkImage = document.getElementById("Park");
+var SpeedwayImage = document.getElementById("Speedway");
+var BLMImage = document.getElementById("BLM");
+var GasImage = document.getElementById("Gas");
+	
+var caption = document.getElementById("caption");
+	
+function ForceFunction(){
+	console.log("works");
+	ForceImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "No one could hear their cries."
+}	
+	
+function ForceOutFunction(){
+	console.log("ForceOut function works")
+	ForceImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}	
+
+function FlagFunction(){
+	console.log("Flag");
+	FlagImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "Under the united flag we are nothing but devided."
+}	
+	
+function FlagOutFunction(){
+	console.log("FlagOut function works")
+	FlagImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}	
+	
+function StandGroundFunction(){
+	console.log("works");
+	StandGroundImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "Seen as a lesser, unequal to our fellow man."
+}	
+	
+function StandGroundOutFunction(){
+	console.log("StandGroundOut function works")
+	StandGroundImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}		
+	
+function FistFunction(){
+	console.log("works");
+	FistImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "An unwanted shadow."
+}	
+	
+function FistOutFunction(){
+	console.log("FistOut function works")
+	FistImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}		
+	
+function FreewayFunction(){
+	console.log("works");
+	FreewayImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "The bruises and scars remain."
+}	
+	
+function FreewayOutFunction(){
+	console.log("FreewayOut function works")
+	FreewayImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}	
+	
+function ParkFunction(){
+	console.log("works");
+	ParkImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "Voices echoeing in the night."
+}	
+	
+function ParkOutFunction(){
+	console.log("ParkOut function works")
+	ParkImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}		
+	
+function SpeedwayFunction(){
+	console.log("works");
+	SpeedwayImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "Every bullet and grenade increases the offensive."
+}	
+	
+function SpeedwayOutFunction(){
+	console.log("SpeedwayOut function works")
+	SpeedwayImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}		
+	
+function BLMFunction(){
+	console.log("works");
+	BLMImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "When the looting starts."
+}	
+	
+function BLMOutFunction(){
+	console.log("BLMOut function works")
+	BLMImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}		
+	
+function GasFunction(){
+	console.log("works");
+	GasImage.style.filter ="grayscale(0%)";
+	caption.innerHTML= "The shooting starts."
+}	
+	
+function GasOutFunction(){
+	console.log("GasOut function works")
+	GasImage.style.filter ="grayscale(100%)";
+	caption.innerHTML="";
+}		
+	
+
+</script>	 
+	  
+</body>
+</html>
