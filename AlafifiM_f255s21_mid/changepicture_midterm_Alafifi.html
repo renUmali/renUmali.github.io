@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>midterm</title>
+<link href="css/onmouseover_Alafifi.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class = "top row"> 
+<img id="Camera" onMouseOver="CameraFunction()" onMouseOut="CameraOutFunction()" src="images/Camera.jpg" width="371" height="288" alt=""/>
+<img id="getready" onMouseOver="getreadyFunction()" onMouseOut="getreadyOutFunction()" src="images/getready.jpg" width="384" height="288" alt=""/>
+<img id="infront" onMouseOver="infrontFunction()" onMouseOut="infrontOutFunction()" src="images/infront.jpg" width="384" height="288" alt=""/>
+<img id="chair" onMouseOver="chairFunction()" onMouseOut="chairOutFunction()" src="images/chair.jpg" width="384" height="288" alt=""/> 
+<img id="item" onMouseOver="itemFunction()" onMouseOut="itemOutFunction()" src="images/item.jpg" width="384" height="288" alt=""/> 
+<img id="focus" onMouseOver="focusFunction()" onMouseOut="focusOutFunction()" src="images/focus.jpg" width="396" height="297" alt=""/> 
+<img id="timer" onMouseOver="timerFunction()" onMouseOut="timerOutFunction()" src="images/timer.jpg" width="384" height="288" alt=""/> 
+<img id="take" onMouseOver="takeFunction()" onMouseOut="takeOutFunction()" src="images/take.jpg" width="384" height="288" alt=""/> 
+<img id="picture1" onMouseOver="picture1Function()" onMouseOut="picture1OutFunction()" onClick="changepicture1()" src="images/picture1.jpg" width="243" height="432" alt=""/> 
+
+	
+	</div>
+<p id="caption"></p>	
+<script>
+	
+var CameraImage = document.getElementById("Camera");
+var getreadyImage = document.getElementById("getready");
+var infrontImage = document.getElementById("infront");
+var chairImage = document.getElementById("chair");	
+var itemImage = document.getElementById("item");
+var focusImage = document.getElementById("focus");	
+var timerImage = document.getElementById("timer");	
+var takeImage = document.getElementById("take");
+var picture1Image = document.getElementById("picture1");
+
+var caption = document.getElementById("caption");
+	
+function CameraFunction(){
+	console.log("works")
+	CameraImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Take any camera or any device you have."
+}
+	
+function CameraOutFunction(){
+	console.log ("CameraOut function work")
+	CameraImage.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+}
+	function getreadyFunction(){
+	console.log("works")
+	getreadyImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Use tripod to start."
+}
+	
+function getreadyOutFunction(){
+	console.log ("getreadyOut function work")
+	getreadyImage.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+}
+function infrontFunction(){
+	console.log("works")
+	infrontImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "place it in front of the place you want to shoot yourself in."
+}
+	
+function infrontOutFunction(){
+	console.log ("infrontOut function work")
+	infrontImage.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+}
+function chairFunction(){
+	console.log("works")
+	chairImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "I will use a chair for this portrait, and place the chair near from sunlight, like a window."
+}
+	
+function chairOutFunction(){
+	console.log ("chairOut function work")
+	chairImage.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+}
+function itemFunction(){
+	console.log("works")
+	itemImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Put an item to help you fixing the focus"
+}
+	
+function itemOutFunction(){
+	console.log ("itemOut function work")
+	itemImage.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+}
+	function focusFunction(){
+	console.log("works")
+	focusImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Start fixing the focus."
+}
+	
+function focusOutFunction(){
+	console.log ("focusOut function work")
+	focusImage.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+	
+}
+	function timerFunction(){
+	console.log("works")
+	timerImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Set a 10 sec timer."
+}
+	
+function timerOutFunction(){
+	console.log ("timerOut function work")
+	timerImage.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+}
+	function takeFunction(){
+	console.log("works")
+	takeImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Press the button to take the image and go to place yourself in the chair, don't forget to take the picture near from the sunlight"
+}
+	
+function takeOutFunction(){
+	console.log ("takeOut function work")
+	takeImage.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+}
+	function picture1Function(){
+	console.log("works")
+	picture1Image.style.filter = "grayscale(0%)";
+	caption.innerHTML = "the results."
+}
+	
+function picture1OutFunction(){
+	console.log ("picture1Out function work")
+	picture1Image.style.filter = "grayscale(100%)";
+	caption.innerHTML="";
+}
+function changepicture1(){
+	console.log("should change picture1")
+	picture1Image.src = "images/picture2.jpg";
+}
+	
+	
+	</script>
+	
+	
+</body>
+</html>
