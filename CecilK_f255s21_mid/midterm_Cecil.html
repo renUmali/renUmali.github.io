@@ -1,0 +1,197 @@
+<!doctype html>
+<h1>Kelsei's Favorite Anime Characters</h1>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Kelsei's Favorite Anime Characters</title>
+<link href="css/midtern_Cecil.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/vt323:n4:default;advent-pro:n1:default;alex-brush:n4:default;dawning-of-a-new-day:n4:default;just-me-again-down-here:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class = "one"> 
+	<img id="as" onMouseOver="asFunction()" onMouseOut="asOutFunction()" onClick="changeas()" src="images/assclass cover.jpg" width="240" height="400" alt=""/> 
+	<img id="bc" onMouseOver="bcFunction()" onMouseOut="bcOutFunction()" onClick="changebc()" src="images/black clover cover.jpg" width="240" height="400" alt=""/> 
+	<img id="ds" onMouseOver="dsFunction()" onMouseOut="dsOutFunction()" onClick="changeds()" src="images/demon slayer cover.jpg" width="240" height="400" alt=""/> 
+	<p id="rowone"> A Class Anime</p>
+	</div>
+	
+	
+	
+<div class = "two"> 
+	<img id="ff" onMouseOver="ffFunction()" onMouseOut="ffOutFunction()" onClick="changeff()" src="images/fire force cover.jpg" width="240" height="400" alt=""/> 
+	<img id="fmab" onMouseOver="fmabFunction()" onMouseOut="fmabOutFunction()" onClick="changefmab()" src="images/fmab cover.jpg" width="240" height="400" alt=""/> 
+	<img id="Magi" onMouseOver="MagiFunction()" onMouseOut="MagiOutFunction()" onClick="changeMagi()" src="images/magi cover.jpg" width="240" height="400" alt=""/> 
+	<p id="rowtwo">B Class Anime</p>
+	</div>
+	
+	
+<div class = "three"> 
+	<img id="mha" onMouseOver="mhaFunction()" onMouseOut="mhaOutFunction()" onClick="changemha()" src="images/mha cover.jpg" width="240" height="400" alt=""/> 
+	<img id="tg" onMouseOver="tgFunction()" onMouseOut="tgOutFunction()" onClick="changetg()" src="images/tokyo ghoul cover.jpg" width="240" height="400" alt=""/> 
+	<img id="vg" onMouseOver="vgFunction()" onMouseOut="vgOutFunction()" onClick="changevg()" src="images/vec.jpg" width="240" height="400" alt=""/> 
+	<p id="rowthree"> C Class Anime</p>
+	</div>
+	
+	
+<script>
+	var asImage = document.getElementById("as")
+	var bcImage = document.getElementById("bc")
+	var dsImage = document.getElementById("ds")
+	var ffImage = document.getElementById("ff")
+	var fmabImage = document.getElementById("fmab")
+	var MagiImage = document.getElementById("Magi")
+	var mhaImage = document.getElementById("mha")
+	var tgImage = document.getElementById("tg")
+	var vgImage = document.getElementById("vg")
+	
+	var rowone = document.getElementById("rowone");
+	var rowtwo = document.getElementById("rowtwo");
+	var rowthree = document.getElementById("rowthree");
+	
+	function asFunction(){
+		console.log("works");
+		asImage.style.filter="grayscale(0%)";
+		rowone.innerHTML = "Karma Akabane. A Top Student at a school where you have to kill your teacher."
+	}
+	
+	function asOutFunction(){
+		console.log("asOut function works");
+		asImage.style.filter="grayscale(100%)";
+	}
+		
+	function changeas(){
+		console.log("should change as")
+		asImage.src = "images/karma.jpg";
+	}
+	
+	function bcFunction(){
+		console.log("works");
+		bcImage.style.filter="grayscale(0%)";
+		rowone.innerHTML = "Vanessa Enoteca. Runaway Princess turned underdog."
+		}
+	
+	function bcOutFunction(){
+		console.log("bcOut function works");
+		bcImage.style.filter="grayscale(100%)";
+	}
+	
+	function changebc(){
+		console.log("should change bc")
+		bcImage.src = "images/vanessa.jpg";
+	}
+	
+	function dsFunction(){
+		console.log("works");
+		dsImage.style.filter="grayscale(0%)";
+		rowone.innerHTML = "Zenitsu Agatsuma. A love sick idiot in over his head."
+	}
+	
+	function dsOutFunction(){
+		console.log("dsOut function works");
+		dsImage.style.filter="grayscale(100%)";
+	}
+	
+	function changeds(){
+		console.log("should change ds")
+		dsImage.src = "images/zenitsu.jpg";
+	}
+		
+	function ffFunction(){
+		console.log("works");
+		ffImage.style.filter="grayscale(0%)";
+		rowtwo.innerHTML = "Shinra Kusakabe. Trying to use his evil power for good."
+	}
+		
+	function ffOutFunction(){
+		console.log("ffOut function works");
+		ffImage.style.filter="grayscale(100%)";
+	}
+	
+	function changeff(){
+		console.log("should change ff")
+		ffImage.src = "images/shinra.jpg";
+	}
+		
+	function fmabFunction(){
+		console.log("works");
+		fmabImage.style.filter="grayscale(0%)";
+		rowtwo.innerHTML = "Edward Elric. He just wants his family back."
+	}
+		
+	function fmabOutFunction(){
+		console.log("fmabOut function works");
+		fmabImage.style.filter="grayscale(100%)";
+	}
+		
+	function changefmab(){
+		console.log("should change fmab")
+		fmabImage.src = "images/eddy.jpg";
+	}
+		
+	function MagiFunction(){
+		console.log("works");
+		MagiImage.style.filter="grayscale(0%)";
+		rowtwo.innerHTML = "Hakuryuu Ren. A prince trying to restore his kingdom."
+	}	
+		
+	function MagiOutFunction(){
+		console.log("MagiOut function works");
+		MagiImage.style.filter="grayscale(100%)";
+	}
+		
+	function changeMagi(){
+		console.log("should change Magi")
+		MagiImage.src = "images/haku.jpg";
+	}
+		
+	function mhaFunction(){
+		console.log("works");
+		mhaImage.style.filter="grayscale(0%)";
+		rowthree.innerHTML = "Shouta Aizawa. A teacher to a group of talented kids."
+	}
+		
+	function mhaOutFunction(){
+		console.log("mhaOut function works");
+		mhaImage.style.filter="grayscale(100%)";
+	}
+		
+	function changemha(){
+		console.log("should change mha")
+		mhaImage.src = "images/teach.jpg";
+	}
+		
+	function tgFunction(){
+		console.log("works");
+		tgImage.style.filter="grayscale(0%)";
+		rowthree.innerHTML = "Ken Kaneki. A guy who is not having a good time."
+	}
+		
+	function tgOutFunction(){
+		console.log("tgOut function works");
+		tgImage.style.filter="grayscale(100%)";
+	}
+		
+	function changetg(){
+		console.log("should change tg")
+		tgImage.src = "images/kaneki.jpg";
+	}
+		
+	function vgFunction(){
+		console.log("works");
+		vgImage.style.filter="grayscale(0%)";
+		rowthree.innerHTML = "Violet Evergarden. A child soldier trying to understand the meaning of life."
+	}
+		
+	function vgOutFunction(){
+		console.log("vgOut function works");
+		vgImage.style.filter="grayscale(100%)";
+	}
+		
+	function changevg(){
+		console.log("should change vg")
+		vgImage.src = "images/doll.jpg";
+	}	
+	</script>
+</body>
+</html>
