@@ -1,0 +1,23 @@
+@charset "UTF-8";
+.top.row img {
+    width: 300px;
+    height: auto;
+    max-height: 200px;
+    filter: grayscale(100%);
+}
+#caption {
+    border-width: medium;
+    border-style: solid;
+    min-height: 100px;
+    font-family: cousine;
+    font-style: normal;
+    font-weight: 900;
+    font-size: xx-large;
+}
+.top.row #picture1 {
+    width: 194px;
+    margin-right: 0px;
+    margin-left: 513px;
+    height: 214px;
+    max-height: 240px;
+}
