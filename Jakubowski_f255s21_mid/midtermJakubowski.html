@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>midtermJakubowski</title>
+<link href="css/midtermJakubowski.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/devonshire:n4:default;aguafina-script:n4:default;cousine:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class = "topRow">
+<p>*Click each Image for a Second Image!*</p>
+<img id="school" onMouseOver="schoolfunction()" onMouseOut="schoolOutFunction()" onClick="changeSchool()" src="images/schoolOne.jpg" width="1280" height="960" alt=""/>
+</div>
+    
+<div class = "midRow">
+<img id="work" onMouseOver="workfunction()" onMouseOut="workOutFunction()" onClick="changeWork()" src="images/workOne.jpg" width="1280" height="961" alt=""/>
+<p id="caption"> Place cursor over Image to learn how that aspect of my life has been affected by COVID </p>
+<img id="holiday" onMouseOver="holidayfunction()" onMouseOut="holidayOutFunction()" onClick="changeHoliday()" src="images/holidayOne.jpg" width="1280" height="960" alt=""/>
+</div>
+    
+<div class = "botRow">
+<img id="games" onMouseOver="gamesfunction()" onMouseOut="gamesOutFunction()" onClick="changeGames()" src="images/gamesOne.jpg" width="1280" height="720" alt=""/>
+<img id="roommates" onMouseOver="roommatesfunction()" onMouseOut="roommatesOutFunction()" onClick="changeRoommates()" src="images/roommatesOne.jpg" width="1280" height="960" alt=""/>
+</div>
+
+<script>
+	
+var schoolImage = document.getElementById("school");
+var workImage = document.getElementById("work");
+var holidayImage = document.getElementById("holiday");
+var gamesImage = document.getElementById("games");
+var roommatesImage = document.getElementById("roommates");
+	
+var caption = document.getElementById("caption")
+
+function schoolfunction(){
+	console.log("school");
+	schoolImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "I never wanted to take online classes since I know I learn best face to face, but honestly I adapted to it overtime and forced myself to keep up, despite being stuck in my room doing the same things everyday."
+}
+	
+function schoolOutFunction(){
+	console.log("schoolOut function works")
+	schoolImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "Place cursor over Image to learn how that aspect of my life has been affected by COVID";
+}
+	
+function changeSchool(){
+	console.log("should change School image")
+	schoolImage.src = "images/schoolTwo.jpg"
+}
+
+function workfunction(){
+	console.log("work");
+	workImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "At the beginning of COVID, Starbucks closed so I was working at Target for several months before it reopened. Many people I worked with all got sick at once so there were times I was being called in everyday."
+}
+	
+function workOutFunction(){
+	console.log("workOut function works")
+	workImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "Place cursor over Image to learn how that aspect of my life has been affected by COVID";
+}
+	
+function changeWork(){
+	console.log("should change Work image")
+	workImage.src = "images/workTwo.jpg"
+}
+
+function holidayfunction(){
+	console.log("holiday");
+	holidayImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Every holiday throughout the last year has been very lonely and paranoid. My grandma usually hosts most of the big holidays but in an effort to avoid her getting sick, all these traditions had to be changed."
+}
+	
+function holidayOutFunction(){
+	console.log("holidayOut function works")
+	holidayImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "Place cursor over Image to learn how that aspect of my life has been affected by COVID";
+}
+	
+function changeHoliday(){
+	console.log("should change Holiday image")
+	holidayImage.src = "images/holidayTwo.jpg"
+}
+	
+function gamesfunction(){
+	console.log("games");
+	gamesImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Playing games has always been my main escape from whatever is on my mind and this year I needed them more than ever. Playing games by myself and with my roommates is one of my primary sources of happiness."
+}
+	
+function gamesOutFunction(){
+	console.log("gamesOut function works")
+	gamesImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "Place cursor over Image to learn how that aspect of my life has been affected by COVID";
+}
+	
+function changeGames(){
+	console.log("should change Games image")
+	gamesImage.src = "images/gamesTwo.jpg"
+}
+	
+function roommatesfunction(){
+	console.log("roommates");
+	roommatesImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "In August, during COVID, I moved into a duplex near UWM with my two best friends, Karissa and Ashley. Living with them has given me an interesting college experience that I'll never take for granted."
+}
+	
+function roommatesOutFunction(){
+	console.log("roommatesOut function works")
+	roommatesImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "Place cursor over Image to learn how that aspect of my life has been affected by COVID";
+}
+	
+function changeRoommates(){
+	console.log("should change Roommates image")
+	roommatesImage.src = "images/roommatesTwo.jpg"
+}
+	
+</script>
+
+</body>
+</html>
