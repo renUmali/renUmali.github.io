@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Midterm_Meinholz</title>
+<link href="css/midterm_Meinholz.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/atomic-age:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class = "top row">
+	
+<img id="dreyk" onMouseOver="dreykFunction()" onMouseOut="dreykFunctionOut()" onClick="changeDreyk()" src="images/Dreyk_1.jpg" width="1080" height="1350" alt=""/>
+	
+<img id="kam" onMouseOver="kamFunction()" onMouseOut="kamFunctionOut()" onClick="changeKam()" src="images/Kam_1.jpg" width="1080" height="1350" alt=""/>
+	
+<img id="keegs" onMouseOver="keegsFunction()" onMouseOut="keegsFunctionOut()"  onClick="changeKeegs()" src="images/Keegs_1.jpg" width="1080" height="1350" alt=""/>
+	
+<img id="tarek" onMouseOver="tarekFunction()" onMouseOut="tarekFunctionOut()"  onClick="changeTarek()" src="images/Tarek_1.jpg" width="1080" height="1350" alt=""/>
+</div>
+	
+<img id="fam" onMouseOver="famFunction()" onMouseOut="famFunctionOut()"  onClick="changeFam()" src="images/Fam_1.jpg" width="2063" height="1080" alt=""/> 
+	
+	<p id="caption"> Put Caption Here.</p>
+	
+<script>
+	
+	var dreykImage = document.getElementById("dreyk");
+	var kamImage = document.getElementById("kam");
+	var keegsImage = document.getElementById("keegs");
+	var tarekImage = document.getElementById("tarek");
+	var famImage = document.getElementById("fam");
+	var caption = document.getElementById("caption");
+	
+
+	function changeDreyk(){
+	console.log("This should change the Dreyk image")
+	dreykImage.src = "images/Dreyk_2.jpg"
+		
+	}
+	
+	function changeKam(){
+	console.log("This should change the Kam image")
+	kamImage.src = "images/Kam_2.jpg"
+	}
+		
+	function changeKeegs(){
+	console.log("This should change the Keegs image")
+	keegsImage.src = "images/Keegs_2.jpg"
+		
+	}
+	
+	function changeTarek(){
+	console.log("This should change the Tarek image")
+	tarekImage.src = "images/Tarek_2.jpg"
+		
+	}
+	
+	function changeFam(){
+	console.log("This should change the Fam image")
+	famImage.src = "images/Fam_2.jpg"
+		
+	}
+	
+	function dreykFunction(){
+	console.log("works");
+	dreykImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "This is my brother, Dreyk. He is 5 years old and is one of my best friends in the entire world.";
+}
+	
+	function dreykFunctionOut(){
+	console.log("Dreyk Function Out Works");
+	dreykImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "";
+	}
+	
+	function kamFunction(){
+	console.log("works");
+	kamImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "The is my brother, Kamdyn, he is also one of my best friends and is basically a child version of myself in every way.";
+}
+	
+	function kamFunctionOut(){
+	console.log("Kam Function Out Works")
+	kamImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "";
+	
+}
+	
+	function keegsFunction(){
+	console.log("works");
+	keegsImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "This is Keegan, he is one of two of my best friends currently and is one of the first people I've met moving to Milwaukee";
+}
+	
+	function keegsFunctionOut(){
+	console.log("House Function Out Works")
+	keegsImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "";
+	
+}
+	
+	
+	function tarekFunction(){
+	console.log("works");
+	tarekImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "Tarek is the other of my two best friends, we go on countless fun adventures and has made me grow as a person in tremendous ways";
+}
+	
+	function tarekFunctionOut(){
+	console.log("House Function Out Works")
+	tarekImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "";
+	
+}
+	
+	function famFunction(){
+	console.log("works");
+	famImage.style.filter = "grayscale(0%)";
+	caption.innerHTML = "This is one part of my family, they are the reason why I strive for greatness and I am forever in their debt for the success I will achieve in the future.";
+	}
+	
+	function famFunctionOut(){
+	console.log("fam Function Out Works")
+	famImage.style.filter = "grayscale(100%)";
+	caption.innerHTML = "";
+	
+	}
+	
+</script>
+</body>
+</html>
