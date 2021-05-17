@@ -1,0 +1,452 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>final_martinich</title>
+<link href="css/final_martinich.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.--><script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/condiment:n4:default;cousine:n4:default.js" type="text/javascript"></script>
+</head>
+
+<body>
+	
+<div class = "rowOfVideos">
+<video id="video1" muted="muted" loop="loop" >
+  <source src="videos/star1.mp4" type="video/mp4">
+</video>
+<video id="video2" muted="muted" loop="loop" >
+  <source src="videos/star2.mp4" type="video/mp4">
+</video>
+<video id="video3" muted="muted" loop="loop" >
+  <source src="videos/planets1.mp4" type="video/mp4">
+</video>
+</div>
+	
+<div class = "rowOfVideos">
+<video id="video4" muted="muted" loop="loop" >
+  <source src="videos/star1.mp4" type="video/mp4">
+</video>
+<video id="video5" muted="muted" loop="loop" >
+  <source src="videos/star2.mp4" type="video/mp4">
+</video>
+<video id="video6" muted="muted" loop="loop" >
+  <source src="videos/planets1.mp4" type="video/mp4">
+</video>
+</div>
+	
+<div class= "galaxyName">
+<p><span id="word01"> Welcome </span> <span id="word02"> To </span> <span id="word03"> Space </span>
+	</p>
+	</div>
+	
+<div>
+  <button id="randomizerBtn" onClick="randomizerFunction()">Randomize</button>
+</div>
+	
+<audio id="ambient_audio">
+  <source src="audio/CrowanderAmbient.mp3" type="audio/mp3">
+</audio>
+	
+<audio id="ambient_audio2">
+  <source src="audio/BiounitAmbient.mp3" type="audio/mp3">
+</audio>
+	
+<script>
+	
+var video1 = document.getElementById("video1");
+var video2 = document.getElementById("video2");
+var video3 = document.getElementById("video3");
+var video4 = document.getElementById("video4");
+var video5 = document.getElementById("video5");
+var video6 = document.getElementById("video6");
+var btn = document.getElementById("pauseBtn");
+	
+var star1 = "videos/star1.mp4";
+var star2 = "videos/star2.mp4";
+var star3 = "videos/star3.mp4";
+var star4 = "videos/star4.mp4";
+	
+var planets1 = "videos/planets1.mp4";
+var planets2 = "videos/planets2.mp4";
+var planets3 = "videos/planets3.mp4";
+var planets4 = "videos/planets4.mp4";
+	
+var comets1 = "videos/comets1.mp4";
+var comets2 = "videos/comets2.mp4";
+var comets3 = "videos/comets3.mp4";
+	
+var asteroids1 = "videos/asteroids1.mp4";
+	
+var ambient_audio = document.getElementById("ambient_audio");
+var songPlaying = false;
+var randomStart = 0;	
+function randomizerFunction(){
+	
+	channel = Math.floor(Math.random()*2)+1;
+
+	if (channel == 1){
+		ambient_audio.src = "audio/CrowanderAmbient.mp3";
+        randomStart = Math.floor(Math.random()*200)+1;
+        ambient_audio.currentTime = randomStart;
+		ambient_audio.play();
+        console.log("randomStart: " + randomStart);
+	}
+	if (channel == 2){
+		ambient_audio.src = "audio/BiounitAmbient.mp3";
+        randomStart = Math.floor(Math.random()*200)+1;
+        ambient_audio.currentTime = randomStart;
+		ambient_audio.play();
+		//ambient_audio.play();
+        console.log("randomStart: " + randomStart);	
+	}
+    ambient_audio.onloadedmetadata = function() {
+       console.log(ambient_audio.duration);
+    };
+
+	channel = Math.floor(Math.random()*12)+1;
+	//console.log("the channel is: " + channel);
+	if (channel == 1){
+		video1.src = star1;
+	}
+	
+	if (channel == 2){
+		video1.src = star2;
+	}
+	
+	if (channel == 3){
+		video1.src = star3;
+	}
+	
+	if (channel == 4){
+		video1.src = star4;
+	}
+	
+	if (channel == 5){
+		video1.src = planets1;
+	}
+	
+	if (channel == 6){
+		video1.src = planets2;
+	}
+	
+	if (channel == 7){
+		video1.src = planets3;
+	}
+	
+	if (channel == 8){
+		video1.src = planets4;
+	}
+	
+	if (channel == 9){
+		video1.src = comets1;
+	}
+	
+	if (channel == 10){
+		video1.src = comets2;
+	}
+	
+	if (channel == 11){
+		video1.src = comets3;
+	}
+	
+	if (channel == 12){
+		video1.src = asteroids1;
+	}
+	
+	channel = Math.floor(Math.random()*12)+1;
+	//console.log("the channel is: " + channel);
+	if (channel == 1){
+		video2.src = star1;
+	}
+	
+	if (channel == 2){
+		video2.src = star2;
+	}
+	
+	if (channel == 3){
+		video2.src = star3;
+	}
+	
+	if (channel == 4){
+		video2.src = star4;
+	}
+	
+	if (channel == 5){
+		video2.src = planets1;
+	}
+	
+	if (channel == 6){
+		video2.src = planets2;
+	}
+	
+	if (channel == 7){
+		video2.src = planets3;
+	}
+	
+	if (channel == 8){
+		video2.src = planets4;
+	}
+	
+	if (channel == 9){
+		video2.src = comets1;
+	}
+	
+	if (channel == 10){
+		video2.src = comets2;
+	}
+	
+	if (channel == 11){
+		video2.src = comets3;
+	}
+	
+	if (channel == 12){
+		video2.src = asteroids1;
+	}
+	
+	channel = Math.floor(Math.random()*12)+1;
+	//console.log("the channel is: " + channel);
+	if (channel == 1){
+		video3.src = star1;
+	}
+	
+	if (channel == 2){
+		video3.src = star2;
+	}
+	
+	if (channel == 3){
+		video3.src = star3;
+	}
+	
+	if (channel == 4){
+		video3.src = star4;
+	}
+	
+	if (channel == 5){
+		video3.src = planets1;
+	}
+	
+	if (channel == 6){
+		video3.src = planets2;
+	}
+	
+	if (channel == 7){
+		video3.src = planets3;
+	}
+	
+	if (channel == 8){
+		video3.src = planets4;
+	}
+	
+	if (channel == 9){
+		video3.src = comets1;
+	}
+	
+	if (channel == 10){
+		video3.src = comets2;
+	}
+	
+	if (channel == 11){
+		video3.src = comets3;
+	}
+	
+	if (channel == 12){
+		video3.src = asteroids1;
+	}
+	
+	channel = Math.floor(Math.random()*12)+1;
+	//console.log("the channel is: " + channel);
+	if (channel == 1){
+		video4.src = star1;
+	}
+	
+	if (channel == 2){
+		video4.src = star2;
+	}
+	
+	if (channel == 3){
+		video4.src = star3;
+	}
+	
+	if (channel == 4){
+		video4.src = star4;
+	}
+	
+	if (channel == 5){
+		video4.src = planets1;
+	}
+	
+	if (channel == 6){
+		video4.src = planets2;
+	}
+	
+	if (channel == 7){
+		video4.src = planets3;
+	}
+	
+	if (channel == 8){
+		video4.src = planets4;
+	}
+	
+	if (channel == 9){
+		video4.src = comets1;
+	}
+	
+	if (channel == 10){
+		video4.src = comets2;
+	}
+	
+	if (channel == 11){
+		video4.src = comets3;
+	}
+	
+	if (channel == 12){
+		video4.src = asteroids1;
+	}
+	
+	channel = Math.floor(Math.random()*12)+1;
+	//console.log("the channel is: " + channel);
+	if (channel == 1){
+		video5.src = star1;
+	}
+	
+	if (channel == 2){
+		video5.src = star2;
+	}
+	
+	if (channel == 3){
+		video5.src = star3;
+	}
+	
+	if (channel == 4){
+		video5.src = star4;
+	}
+	
+	if (channel == 5){
+		video5.src = planets1;
+	}
+	
+	if (channel == 6){
+		video5.src = planets2;
+	}
+	
+	if (channel == 7){
+		video5.src = planets3;
+	}
+	
+	if (channel == 8){
+		video5.src = planets4;
+	}
+	
+	if (channel == 9){
+		video5.src = comets1;
+	}
+	
+	if (channel == 10){
+		video5.src = comets2;
+	}
+	
+	if (channel == 11){
+		video5.src = comets3;
+	}
+	
+	if (channel == 12){
+		video5.src = asteroids1;
+	}
+	
+	channel = Math.floor(Math.random()*12)+1;
+	//console.log("the channel is: " + channel);
+	if (channel == 1){
+		video6.src = star1;
+	}
+	
+	if (channel == 2){
+		video6.src = star2;
+	}
+	
+	if (channel == 3){
+		video6.src = star3;
+	}
+	
+	if (channel == 4){
+		video6.src = star4;
+	}
+	
+	if (channel == 5){
+		video6.src = planets1;
+	}
+	
+	if (channel == 6){
+		video6.src = planets2;
+	}
+	
+	if (channel == 7){
+		video6.src = planets3;
+	}
+	
+	if (channel == 8){
+		video6.src = planets4;
+	}
+	
+	if (channel == 9){
+		video6.src = comets1;
+	}
+	
+	if (channel == 10){
+		video6.src = comets2;
+	}
+	
+	if (channel == 11){
+		video6.src = comets3;
+	}
+	
+	if (channel == 12){
+		video6.src = asteroids1;
+	}
+	
+		
+	var word01 = document.getElementById("word01");
+	var wordlist01= ["Neon", "Glowing", "Dusk", "Limitless", "Toxic", "Dark", "Shimmering", "Onyx", "Endless", "Forbidden"]
+	
+	channel = Math.floor(Math.random()*wordlist01.length);
+	word01.innerHTML=wordlist01[channel];
+	
+	var word02 = document.getElementById("word02");
+	var wordlist02= ["Foaming", "Starry", "Shooting", "Scrolling", "Traveling", "Expansive", "Fluttering", "Habitat", "Journey", "Quest"]
+	
+	channel = Math.floor(Math.random()*wordlist02.length);
+	word02.innerHTML=wordlist02[channel];
+	
+	var word03 = document.getElementById("word03");
+	var wordlist03= ["Galaxy", "Universe", "World"]
+	
+	channel = Math.floor(Math.random()*wordlist03.length);
+	word03.innerHTML=wordlist03[channel];
+	
+	video1.play();
+	video2.play();
+	video3.play();
+	video4.play();
+	video5.play();
+	video6.play();
+}
+
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</script>
+	
+</body>
+</html>
