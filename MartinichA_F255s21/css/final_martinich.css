@@ -1,0 +1,31 @@
+@charset "utf-8";
+#video1 {
+	position: relative;
+	max-width: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+#pauseBtn:hover{
+	background: #64628E;
+	color: aliceblue;
+}.rowOfVideos {
+	display: flex;
+	margin-left: 150px;
+	margin-right: 150px;
+}
+video {
+	width: 400px;
+	height: 225px;
+}
+body {
+	background-color: #000000;
+}
+.galaxyName p {
+	color: #C2C7E6;
+	font-size: 80px;
+	text-align: center;
+	font-family: cousine;
+	font-style: normal;
+	font-weight: 400;
+}
