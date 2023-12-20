@@ -1,0 +1,150 @@
+==================================================================================================
+
+November 27, Sunday (Week 13) Update #1:
+I hope to accomplish the drawing of my background, title screen with looping animation, two
+poses for my character, and three enemy characters.
+
+December 3 (Week 14) Update #2:
+I hope to accomplish finding the four sounds I need for this project, position the enemies in the
+background to hint at the user to click on them, and add text at the end of the last border.
+
+December 10 (Week 15) Update #3:
+I hope to accomplish the coding for my moving background with my character’s walk cycle,
+borders, the clickable objects, initialization screen, and sounds.
+December 19 (Tuesday of Finals Week):
+I want to accomplish posting my project on GitHub and my written notes document.
+
+==================================================================================================
+my response to update #1
+11/28
+
+Jalisle
+
+The project looks good so far. And the changes should be fine. 
+
+For your second one, be sure to set the publish settings so that you can see your project full screen when you test it in the browser. Set Center stage to Both, Make response to Both, and Scale to fill visible area to Fit in view:
+
+
+
+That way, when you test, you'll see the entire stage.
+
+Email me if you run into any issues as you progress this week.
+
+Renato Umali
+
+==================================================================================================
+12/4 with her update #2
+
+I was able to start coding, add borders for background, and finish a second pose for my character. I also started my initialization screen and included one clickable object. I will continue to work on sounds and add more clickable objects for my next update.
+
+==================================================================================================
+12/4 
+
+Jalise
+
+The project looks great so far! And the code for the movement / switching poses works perfectly.
+
+Change the stage / background color to something other than white. Do this in the properties panel while you have nothing selected.
+
+
+
+Do this because the browser window will sometimes be too tall or too wide and show the stage color behind the background, as shown in the below screenshot, which shows your right-most edge.
+
+
+
+Also, add this line of code on line 3 in Frame 2:
+
+
+
+This code makes it so that when you go to Frame 2, your character starts at the standing pose.
+
+Also, start versioning the updates. You did a lot of work on this one and it works great so preserve this version as something like "update02" and then save as "update03" for the next one. This ensures that if something goes wrong with the next update and we cannot troubleshoot it, you always have update02 to fall back on.
+
+Email me if you have any questions as you continue to develop it.
+
+Renato Umali
+
+==================================================================================================
+12/10 SUN with her update #3
+
+
+I was able to add 4 different sounds and 4 different clickable objects. For my 4th update I want to add more details to the background, character, and clickable objects. I am also looking for a different sound for the evil eye but I am having trouble finding audio that will upload to my library.
+Questions:
+1. How do I make the hiss sound louder for the snake?
+2. My character does not start with the standing pose after clicking the fire to go to the next screen after I typed in the code: this.Fire_mcgotoAndPlay("standing");
+
+==================================================================================================
+12/11 MON my response to #3
+
+Jalisle
+
+Great job with the project so far.
+
+1. How do I make the hiss sound louder for the snake?
+
+The best way to do this is to do it outside of Animate. That is, open your hiss sound in an audio editor like Audacity and then amplify it there. Then, re-import into Animate.
+
+I'm sure you had experience with the freely available Audacity program in one of your 100-level courses. If not, it's freely available for Windows, Mac OS, and Lynux. Download it here:
+
+https://www.audacityteam.org/download/
+
+Then open your hiss sound in it. Here's an example using one of my own stereo audio files:
+
+
+
+Select All.
+
+Then Effect -> Amplify:
+
+
+
+That takes you to this pop-up window:
+
+
+
+Then it is up to you to experiment with how loud you want it, all without making it too loud so that it distorts.
+
+Here's what I tried:
+
+
+
+
+And that resulted in this:
+
+
+
+
+
+If you get something like this, then it'll be too loud:
+
+
+
+2. My character does not start with the standing pose after clicking the fire to go to the next screen after I typed in the code: this.Fire_mcgotoAndPlay("standing");
+
+Remember to use the JS Console to help troubleshoot. Running your project with the JS Console on I get this message:
+
+
+
+The error relates to:
+
+this.Fire_mcgotAndPlay is not a function
+
+So that what I searched for and I found it here on Frame 2:
+
+
+
+Add your period:
+
+
+As you continue to develop the project, email me directly if you run into any problems - otherwise I probably won't see your question until the next update.
+
+Renato Umali
+
+
+==================================================================================================
+this does not work:
+
+https://jalisek.github.io/Final/Kerkenbush_FinalAnimate.html
+
+
+
