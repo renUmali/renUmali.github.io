@@ -1,0 +1,55 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure html and body take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Full-page background image with black and white filter */
+.full-page-image {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    display: flex;
+    justify-content: center; /* Horizontally center the text box */
+    align-items: center; /* Vertically center the text box */
+    overflow: hidden; /* Ensures content stays within the viewport */
+}
+
+/* Pseudo-element to apply black and white filter only to the background image */
+.full-page-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url('images/lyric01.jpg'); /* Path to the image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    filter: grayscale(100%); /* Apply black and white filter */
+    z-index: -1; /* Place the background behind the text */
+}
+
+/* Overlay text box styling */
+.overlay-text {
+    background-color: red; /* Red background */
+    color: white; /* White text color */
+    padding: 15px 30px; /* Reduced padding around the text */
+    font-size: 40px; /* Larger text size */
+    font-family: 'Georgia', serif; /* Bold serif font */
+    font-weight: bold; /* Bold text */
+    font-style: italic; /* Italicized text */
+    text-align: center; /* Center the text within the box */
+    border-radius: 5px; /* Slight rounding on the edges */
+    border: 5px solid black; /* Thick black border */
+    position: relative; /* Ensure the text stays above the background */
+    z-index: 1; /* Make sure text box appears above the background image */
+}
