@@ -1,0 +1,38 @@
+/* Resetting default margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure html and body take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Full-page background image styling with upper part focus */
+.full-page-image {
+    background-image: url('images/self_portrait.jpg'); /* Path to the image */
+    background-size: cover; /* Ensure the image covers the entire screen */
+    background-position: top; /* Show more of the upper part of the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    position: relative;
+}
+
+/* Overlay text box styling */
+.overlay-text {
+    position: absolute;
+    bottom: 10%; /* Position in the lower third */
+    left: 50%;
+    transform: translateX(-50%); /* Center the text horizontally */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding around the text */
+    font-size: 36px; /* Text size */
+    font-family: 'Arial', sans-serif; /* Font family */
+    text-align: center; /* Center the text within the box */
+    border-radius: 5px; /* Slightly rounded corners */
+}
