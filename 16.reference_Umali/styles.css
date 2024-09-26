@@ -1,0 +1,36 @@
+/* Reset margin and padding for the entire page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align the text box towards the bottom */
+    background-image: url('images/catBaseballCard.jpg'); /* Path to your image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.text-box {
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white;
+    padding: 15px 20px;
+    width: 60%; /* The text box takes up 60% of the screen width */
+    max-width: 600px; /* Maximum width for larger screens */
+    text-align: center;
+    position: absolute;
+    bottom: 20%; /* Place the text box in the lower third of the page */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.text-box p {
+    font-size: 1.5rem;
+    font-family: 'Courier', monospace; /* Change font to Courier */
+    margin: 0;
+}
