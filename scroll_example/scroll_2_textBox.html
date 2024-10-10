@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scrolling Text Boxes with Background Change</title>
+<style>
+body, html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	overflow-x: hidden;
+	transition: background-image 0.5s ease-in-out;
+	background-size: cover;
+	background-position: center;
+	filter: grayscale(100%); /* Apply grayscale filter to make images black and white */
+}
+.spacer {
+	height: 100vh;
+}
+.text-box {
+	background: rgba(0, 0, 0, 0.7);
+	color: white;
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 600px;
+	max-height: 200px;
+	overflow-y: scroll;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+<div class="spacer"></div>
+<div class="text-box" id="box1">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula turpis at mauris consequat, nec dapibus ex facilisis. Proin venenatis eros nec magna faucibus, id malesuada sapien volutpat. Vivamus id tincidunt dolor. Nulla facilisi. Nam ultrices sapien ut velit vestibulum dictum. Proin aliquet gravida tortor, non vulputate elit feugiat nec. In sed libero nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer vehicula dolor ac metus tempus, a bibendum nulla dapibus. Suspendisse non diam sed libero luctus volutpat. Integer accumsan pretium libero, sit amet vehicula eros. Sed consectetur dictum enim, in pharetra ligula.</p>
+</div>
+<div class="spacer"></div>
+<div class="text-box" id="box2">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce dictum orci at justo dictum, nec consequat justo auctor. Vivamus at vestibulum ex, et consectetur risus. Sed laoreet, velit ac aliquam luctus, dui lacus viverra magna, nec aliquam justo eros ut magna. Curabitur sit amet gravida sapien, a scelerisque nunc. Suspendisse potenti. Aliquam erat volutpat. Quisque in vehicula eros. Aliquam erat volutpat. Donec suscipit magna vel eros mollis, a facilisis est faucibus. Nullam at dui id libero cursus gravida et nec eros. Phasellus condimentum leo orci, id cursus nisl laoreet sed. Cras eget dui suscipit, elementum nisl sed, aliquam nunc.</p>
+</div>
+<div class="spacer"></div>
+<div class="text-box" id="box3">
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et magna lorem. Maecenas et turpis vitae sapien facilisis suscipit. Vivamus tincidunt est et felis cursus, a feugiat leo varius. Sed facilisis auctor tortor, sit amet feugiat risus efficitur at. Nulla facilisi. Aenean venenatis mauris non orci scelerisque, et ullamcorper urna hendrerit. Pellentesque vel risus in urna cursus dignissim. Duis ac lacus nisi. Sed ultrices posuere dolor, in mollis turpis. Curabitur et dictum urna, et fermentum erat. Nulla facilisi. Donec volutpat vel urna nec sodales.</p>
+</div>
+<div class="spacer"></div>
+<script>
+        const boxes = document.querySelectorAll('.text-box');
+        const backgroundImages = [
+            'images/01_rubio.jpg',
+            'images/02_ramos_seshadri.jpg',
+            'images/03_gutierrez.jpg'
+        ];
+		
+
+        if ('IntersectionObserver' in window) {
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: '0px',
+                threshold: 0.1 // Adjust this threshold as needed
+            };
+
+            function intersectionCallback(entries, observer) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const index = Array.from(boxes).indexOf(entry.target);
+                        document.body.style.backgroundImage = `url(${backgroundImages[index]})`;
+                    }
+                });
+            }
+
+            const observer = new IntersectionObserver(intersectionCallback, observerOptions);
+
+            boxes.forEach(box => {
+                observer.observe(box);
+            });
+        } else {
+            // Fallback for browsers that do not support IntersectionObserver
+            document.addEventListener('scroll', function() {
+                boxes.forEach((box, index) => {
+                    const boxRect = box.getBoundingClientRect();
+                    if (boxRect.top < window.innerHeight && boxRect.bottom > 0) {
+                        document.body.style.backgroundImage = `url(${backgroundImages[index]})`;
+                    }
+                });
+            });
+        }
+
+        // Initial background setup
+        document.body.style.backgroundImage = `url(${backgroundImages[0]})`;
+    </script>
+</body>
+</html>
