@@ -1,0 +1,32 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.spacer {
+    height: 100vh; /* Make space for scrolling */
+}
+
+.text-box {
+    background: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+    color: white; /* White text color */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    max-width: 600px;
+    max-height: 200px;
+    overflow-y: auto; /* Scrollable text box */
+    margin: 0 auto; /* Center text box */
+}
+
+.text-box p {
+    margin: 0; /* Remove default paragraph margin */
+}
