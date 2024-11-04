@@ -1,0 +1,32 @@
+/* Set body and html to take up the full screen */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Video element to cover the entire screen */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text box in the lower third of the screen */
+.text-box {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer; /* Indicates clickability */
+}
