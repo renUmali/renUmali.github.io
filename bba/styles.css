@@ -1,0 +1,35 @@
+
+body {
+    font-family: "Courier New", monospace;
+    background-color: black;
+    color: #00FF00;  /* Green text for that old-school monitor effect */
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #00FF00;  /* Green borders */
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #004d00;  /* Dark green background for headers */
+    color: #00FF00;
+}
+
+th:hover {
+    cursor: pointer;
+}
+
+tr:nth-child(even) {
+    background-color: #003300;  /* Darker green for even rows */
+}
+
+tr:hover {
+    background-color: #004d00;  /* Lighter green when hovering over rows */
+}
